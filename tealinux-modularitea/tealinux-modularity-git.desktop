@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Tealinux utils
+Categories=Development
+Exec=/usr/bin/tealinux-modularity
+Icon=/usr/share/icons/tealinux-installer.png
+Terminal=false
+Type=Application
+Comment=
+Path=
+StartupNotify=false

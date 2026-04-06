@@ -16,6 +16,10 @@ arch-install-scripts
 
 # installer
 tealinux-installer-git
+
+# modularitea
+tealinux-modularity-git
+
 lshw
 dmidecode
 rsync
