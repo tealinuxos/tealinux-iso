@@ -1,0 +1,5 @@
+(
+    save_location: Pictures,
+    choice: Output(Some("Virtual-1")),
+    last_rectangle: None,
+)

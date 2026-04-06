@@ -14,12 +14,17 @@ function _tide_item_git
 
     # Operation
     if test -d $gdir/rebase-merge
-        read -f step <$gdir/rebase-merge/msgnum
-        read -f total_steps <$gdir/rebase-merge/end
+        # Turn ANY into ALL, via double negation
+        if not path is -v $gdir/rebase-merge/{msgnum,end}
+            read -f step <$gdir/rebase-merge/msgnum
+            read -f total_steps <$gdir/rebase-merge/end
+        end
         test -f $gdir/rebase-merge/interactive && set -f operation rebase-i || set -f operation rebase-m
     else if test -d $gdir/rebase-apply
-        read -f step <$gdir/rebase-apply/next
-        read -f total_steps <$gdir/rebase-apply/last
+        if not path is -v $gdir/rebase-apply/{next,last}
+            read -f step <$gdir/rebase-apply/next
+            read -f total_steps <$gdir/rebase-apply/last
+        end
         if test -f $gdir/rebase-apply/rebasing
             set -f operation rebase
         else if test -f $gdir/rebase-apply/applying
@@ -45,7 +50,7 @@ function _tide_item_git
 (0|(?<dirty>.*))\n(0|(?<untracked>.*))(\n(0|(?<behind>.*))\t(0|(?<ahead>.*)))?' \
         "$(git $_set_dir_opt stash list 2>/dev/null | count
         string match -r ^UU $stat | count
-        string match -r ^[ADMR]. $stat | count
+        string match -r ^[ADMR] $stat | count
         string match -r ^.[ADMR] $stat | count
         string match -r '^\?\?' $stat | count
         git rev-list --count --left-right @{upstream}...HEAD 2>/dev/null)"
