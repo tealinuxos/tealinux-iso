@@ -28,7 +28,6 @@ dmidecode
 rsync
 fuse2
 gcc-libs
-webkit2gtk
 grub
 efibootmgr
 amd-ucode
@@ -39,6 +38,7 @@ webkit2gtk-4.1
 
 # network
 networkmanager
+curl
 
 # editor
 neovim
