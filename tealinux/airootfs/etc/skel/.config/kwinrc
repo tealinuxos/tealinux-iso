@@ -2,8 +2,8 @@
 library=org.kde.klassy
 theme=Klassy
 BorderSize=Normal
-ButtonsOnLeft=XIA
-ButtonsOnRight=M
+ButtonsOnLeft=M
+ButtonsOnRight=IAX
 
 [Windows]
 BorderlessMaximizedWindows=false
