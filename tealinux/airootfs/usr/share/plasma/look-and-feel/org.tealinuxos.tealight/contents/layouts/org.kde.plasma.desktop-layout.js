@@ -133,11 +133,10 @@ var layout = {
                     "wallpaperplugin": "org.kde.image"
                 }
             },
-            "height": 3.625,
+            "height": 2.875,
             "hiding": "normal",
             "location": "top",
-            "maximumLength": 128,
-            "minimumLength": 128,
+            "lengthMode": "fill",
             "offset": 0
         },
         {
@@ -203,11 +202,10 @@ var layout = {
                     "wallpaperplugin": "org.kde.image"
                 }
             },
-            "height": 5,
+            "height": 4.375,
             "hiding": "dodgewindows",
             "location": "bottom",
-            "maximumLength": 128,
-            "minimumLength": 128,
+            "lengthMode": "fit",
             "offset": 0
         }
     ],
