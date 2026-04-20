@@ -1,5 +1,11 @@
 #!/bin/bash
-sudo sed -i "s|Server = file://.*|Server = file://$(pwd)/localrepo/|" ./tealinux/pacman.conf
+
+LOCALREPO_DEST="./tealinux/airootfs/localrepo"
+sudo mkdir -p "$LOCALREPO_DEST"
+sudo cp -r ./localrepo/*.pkg.tar.zst ./localrepo/*.db* ./localrepo/*.files* "$LOCALREPO_DEST/" 2>/dev/null || true
+
+# Set Server ke path yang valid di dalam chroot
+sudo sed -i "s|Server = file://.*|Server = file:///localrepo/|" ./tealinux/pacman.conf
 
 start_time=$(date +%s)
 
