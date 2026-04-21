@@ -1,29 +1,42 @@
 #!/bin/bash
 
-LOCALREPO_DEST="./tealinux/airootfs/localrepo"
-sudo mkdir -p "$LOCALREPO_DEST"
-sudo cp -r ./localrepo/*.pkg.tar.zst ./localrepo/*.db* ./localrepo/*.files* "$LOCALREPO_DEST/" 2>/dev/null || true
-
-# Set Server ke path yang valid di dalam chroot
-sudo sed -i "s|Server = file://.*|Server = file:///localrepo/|" ./tealinux/pacman.conf
+sudo sed -i "s|Server = file://.*|Server = file://$(pwd)/localrepo/|" ./tealinux/pacman.conf
 
 start_time=$(date +%s)
 
-# Build and add installer to localrepo
-cd ./tealinux-modularitea
-makepkg -fs
-mv tealinux-modularity-git-1.0-1-x86_64.pkg.tar.zst ../localrepo
-cd ..
+LOCALREPO="$(pwd)/localrepo"
 
-cd ./localrepo
-makepkg -fs
+# --- tealinux-modularity ---
+if [[ ! -f "$LOCALREPO/tealinux-modularity-git-1.0-1-x86_64.pkg.tar.zst" ]]; then
+    cd ./tealinux-modularitea
+    makepkg -fs
+    mv tealinux-modularity-git-1.0-1-x86_64.pkg.tar.zst "$LOCALREPO"
+    cd ..
+else
+    echo "[SKIP] tealinux-modularity already exists"
+fi
+
+# --- modularitea-libs ---
+if [[ ! -f "$LOCALREPO/modularitea-libs-1.0-1-x86_64.pkg.tar.zst" ]]; then
+    git clone https://github.com/tealinuxos/tealinux-modularitea-libs.git
+    cd tealinux-modularitea-libs
+    makepkg -fs
+    cp modularitea-libs-1.0-1-x86_64.pkg.tar.zst "$LOCALREPO"
+    cd ..
+else
+    echo "[SKIP] modularitea-libs already exists"
+fi
+
+# --- repo-add ---
+cd "$LOCALREPO"
 repo-add localrepo.db.tar.xz \
-	tealinux-installer-git-2.0-1-x86_64.pkg.tar.zst \
-	tealinux-modularity-git-1.0-1-x86_64.pkg.tar.zst
+    tealinux-installer-git-2.0-1-x86_64.pkg.tar.zst \
+    tealinux-modularity-git-1.0-1-x86_64.pkg.tar.zst \
+    modularitea-libs-1.0-1-x86_64.pkg.tar.zst
 
 cd ..
 
-# Build ISO
+# --- ISO build ---
 sudo rm -rf .work
 time sudo systemd-inhibit mkarchiso -r -v -w .work -o out tealinux
 
@@ -32,4 +45,3 @@ elapsed_time=$((end_time - start_time))
 
 notify-send -u critical "Tealinux Build" "Exited. done in $elapsed_time seconds"
 mpv notif.mp3 > /dev/null 2>&1 &
-

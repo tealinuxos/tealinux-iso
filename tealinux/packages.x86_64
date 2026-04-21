@@ -19,6 +19,7 @@ tealinux-installer-git
 
 # modularitea
 tealinux-modularity-git
+modularitea-libs
 zram-generator
 reflector
 cpupower
