@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Install TealinuxOS
+Categories=Development
+Exec=/usr/bin/tealinux-installer
+Icon=/usr/share/icons/tealinux-installer.png
+Terminal=false
+Type=Application

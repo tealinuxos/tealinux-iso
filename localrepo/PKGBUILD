@@ -13,9 +13,9 @@ arch=("x86_64")
 url="https://github.com/tealinuxos/tealinux-installer.git"
 license=('GPL')
 depends=("webkit2gtk-4.1")
-makedepends=("grub" "rust")
+makedepends=("grub" "rust" "bun")
 source=(
-    "git+${url}"
+    "tealinux-installer-src::git+https://github.com/tealinuxos/tealinux-installer.git"
     "${pkgname}.desktop"
 )
 sha256sums=(
@@ -24,13 +24,13 @@ sha256sums=(
 )
 
 build() {
-    cd "${srcdir}/tealinux-installer"
+    cd "${srcdir}/tealinux-installer-src"
     bun install
     TEALINUX_BUILD=prod bun run tauri build --no-bundle
 }
 
 package() {
-    install -Dm755 "${srcdir}/tealinux-installer/src-tauri/target/release/tealinux-installer" "${pkgdir}/usr/bin/tealinux-installer"
+    install -Dm755 "${srcdir}/tealinux-installer-src/src-tauri/target/release/tealinux-installer" "${pkgdir}/usr/bin/tealinux-installer"
 
     install -D -m644 ${pkgname}.desktop ${pkgdir}/usr/share/applications/${pkgname}.desktop
 #     install -D -m644 ${pkgname}.desktop ${pkgdir}/etc/xdg/autostart/${pkgname}.desktop

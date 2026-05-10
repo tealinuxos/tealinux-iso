@@ -1,0 +1,99 @@
+af28323c079e0fa169b4d36401c3d61389f63c60	not-for-merge	branch 'bugfix-bios' of https://github.com/tealinuxos/tealinux-installer
+a663fbe47167e164e06d3dc83d62382878bea5fd	not-for-merge	branch 'development' of https://github.com/tealinuxos/tealinux-installer
+2a66ac21a8b13e7c0c3e5bfb54bcf46bb24f637f	not-for-merge	branch 'fadhil-riyanto/master' of https://github.com/tealinuxos/tealinux-installer
+1c0b1640062c25fe2b1b521606bcce0f84f25deb	not-for-merge	branch 'master' of https://github.com/tealinuxos/tealinux-installer
+23da1b4131fd38f8c97587802e369dc5fbeddd0f	not-for-merge	branch 'master_v2' of https://github.com/tealinuxos/tealinux-installer
+0565915561c8b54bfcf333a9cdf11f5c34cb250f	not-for-merge	branch 'naufal/master_v2' of https://github.com/tealinuxos/tealinux-installer
+9013f1422e24cda2e68aa7371e7635a1e66a7e50	not-for-merge	branch 'refactor/hardening' of https://github.com/tealinuxos/tealinux-installer
+7cfd84e46b6deb455d58ae509ea58e3bb2444f00	not-for-merge	branch 'refactor/migrate-to-typescript-logic' of https://github.com/tealinuxos/tealinux-installer
+2f044918df318ac1b386b4acbe9aab5993ca7c34	not-for-merge	branch 'refactor/specta-rs' of https://github.com/tealinuxos/tealinux-installer
+9b7d0a74a7bb6e12ba8946de842e10720355ef3b	not-for-merge	branch 'slave' of https://github.com/tealinuxos/tealinux-installer
+d7c9306c437f8bbdee7d2e22cf0cef99490624b6	not-for-merge	'refs/pull/1/head' of https://github.com/tealinuxos/tealinux-installer
+2a66ac21a8b13e7c0c3e5bfb54bcf46bb24f637f	not-for-merge	'refs/pull/10/head' of https://github.com/tealinuxos/tealinux-installer
+18160112a30c5850c0937148f488b02809704175	not-for-merge	'refs/pull/11/head' of https://github.com/tealinuxos/tealinux-installer
+6324054c080b6c34361fefcce0cf5cab476c50b9	not-for-merge	'refs/pull/12/head' of https://github.com/tealinuxos/tealinux-installer
+4d869413f8e6e2f467f1a1198cefb57d646f0192	not-for-merge	'refs/pull/13/head' of https://github.com/tealinuxos/tealinux-installer
+9f09e0fa7d6224073925ae42e8e9d313d86f4f65	not-for-merge	'refs/pull/14/head' of https://github.com/tealinuxos/tealinux-installer
+34f50c4c8dd5313f0e5bf95302b891441fc2bfb4	not-for-merge	'refs/pull/15/head' of https://github.com/tealinuxos/tealinux-installer
+0565915561c8b54bfcf333a9cdf11f5c34cb250f	not-for-merge	'refs/pull/16/head' of https://github.com/tealinuxos/tealinux-installer
+b9a227713d7af13b8cd151f6c9394d054bda209a	not-for-merge	'refs/pull/17/head' of https://github.com/tealinuxos/tealinux-installer
+4d2c5edd451641e12a036e30e618d9790fafc088	not-for-merge	'refs/pull/18/head' of https://github.com/tealinuxos/tealinux-installer
+accef75aa24f4fda033f879117a25de55b41b72d	not-for-merge	'refs/pull/19/head' of https://github.com/tealinuxos/tealinux-installer
+4ccea6a1f0841ba6e1e2dc87a8cff75780af41e4	not-for-merge	'refs/pull/2/head' of https://github.com/tealinuxos/tealinux-installer
+9e9ec8777292d0a25fe3f33d1d860138996f0b3f	not-for-merge	'refs/pull/20/head' of https://github.com/tealinuxos/tealinux-installer
+07e82d90c4ee249b2d743fa74d8e6ae086fb48e1	not-for-merge	'refs/pull/21/head' of https://github.com/tealinuxos/tealinux-installer
+3970e7f8b3fa9495d7b6b22f87a3ac06b49903d5	not-for-merge	'refs/pull/22/head' of https://github.com/tealinuxos/tealinux-installer
+4cd1287c0cbd1c99bc3f2a25873799d0d52c1801	not-for-merge	'refs/pull/23/head' of https://github.com/tealinuxos/tealinux-installer
+43b77298bca7fbd7d3dbb45bc2bbb8323791dce3	not-for-merge	'refs/pull/24/head' of https://github.com/tealinuxos/tealinux-installer
+1833db358958117a3eb33415e2663275f49c83d9	not-for-merge	'refs/pull/25/head' of https://github.com/tealinuxos/tealinux-installer
+caa72cad54a9dfb57a26bbcbfff7ae80431ad5db	not-for-merge	'refs/pull/26/head' of https://github.com/tealinuxos/tealinux-installer
+e6aa553b74101e0e80c7049f563ce891a7e12a7a	not-for-merge	'refs/pull/27/head' of https://github.com/tealinuxos/tealinux-installer
+97d04e5c9ca8ef23b602fe7b8f5d21d04ff6be57	not-for-merge	'refs/pull/28/head' of https://github.com/tealinuxos/tealinux-installer
+ccc9e7194e5eb9c7a78321f5eec1b66da1c21a34	not-for-merge	'refs/pull/29/head' of https://github.com/tealinuxos/tealinux-installer
+c1171949e55530cb42effc3e2873210adab7c070	not-for-merge	'refs/pull/3/head' of https://github.com/tealinuxos/tealinux-installer
+2772a34e1164301c97c12f0b174a3a63fadf8c2b	not-for-merge	'refs/pull/30/head' of https://github.com/tealinuxos/tealinux-installer
+1312a6bd197c663a303dff5190f6bbad4c69dc40	not-for-merge	'refs/pull/31/head' of https://github.com/tealinuxos/tealinux-installer
+2f98038644a3864d360edd05779bf4cdea66f564	not-for-merge	'refs/pull/32/head' of https://github.com/tealinuxos/tealinux-installer
+a465d1bb72af5d0881ae53d5e5f8acc8a41024ac	not-for-merge	'refs/pull/33/head' of https://github.com/tealinuxos/tealinux-installer
+79c684a167999263e26ae27caceeb87f8c1cbf90	not-for-merge	'refs/pull/34/head' of https://github.com/tealinuxos/tealinux-installer
+31ab5ccdcfacc3086beca8836d09dee7ed5c4481	not-for-merge	'refs/pull/35/head' of https://github.com/tealinuxos/tealinux-installer
+3594a39225273f8bfe5ef51af729d4bae77a691f	not-for-merge	'refs/pull/36/head' of https://github.com/tealinuxos/tealinux-installer
+fbc7bc8753de91ed0ada1ac0133ee0682ee0c42a	not-for-merge	'refs/pull/37/head' of https://github.com/tealinuxos/tealinux-installer
+e0b917e3e0bbc439cbcb5db20382bca1d99c103c	not-for-merge	'refs/pull/38/head' of https://github.com/tealinuxos/tealinux-installer
+591add66882f0ab02db31b924bc6b0d297e16e40	not-for-merge	'refs/pull/39/head' of https://github.com/tealinuxos/tealinux-installer
+f0cc5ed054398423ac1a0dd14df6712116516b79	not-for-merge	'refs/pull/4/head' of https://github.com/tealinuxos/tealinux-installer
+889cfeeaeafedb5e85fd68b6b2e558eb21ab7ec5	not-for-merge	'refs/pull/40/head' of https://github.com/tealinuxos/tealinux-installer
+7a7b3550c0959a9bcbe5484272f2b0544f63a005	not-for-merge	'refs/pull/41/head' of https://github.com/tealinuxos/tealinux-installer
+76218086e5a2748717f54afb1d6a402ffdcdb62d	not-for-merge	'refs/pull/42/head' of https://github.com/tealinuxos/tealinux-installer
+ef6473488229b9b3dcf10e089615ebe6cbce944f	not-for-merge	'refs/pull/43/head' of https://github.com/tealinuxos/tealinux-installer
+a54b53f6c363b95157ccf04bf0c9df8ef3e1122b	not-for-merge	'refs/pull/44/head' of https://github.com/tealinuxos/tealinux-installer
+c385d76e60e59f062bf14d5e8599cd55ed6e7bd4	not-for-merge	'refs/pull/45/head' of https://github.com/tealinuxos/tealinux-installer
+2031e3a291e3a65aeab2dfdc3b698d7474e380e1	not-for-merge	'refs/pull/46/head' of https://github.com/tealinuxos/tealinux-installer
+c75fb487aa043295ad825a859f31b8b105a4f261	not-for-merge	'refs/pull/47/head' of https://github.com/tealinuxos/tealinux-installer
+355d9878e46cb7f312656d590f85d311363fa8df	not-for-merge	'refs/pull/48/head' of https://github.com/tealinuxos/tealinux-installer
+f0cc5ed054398423ac1a0dd14df6712116516b79	not-for-merge	'refs/pull/5/head' of https://github.com/tealinuxos/tealinux-installer
+921e63fa9ab7bfe933470f8a1990c84acd406d24	not-for-merge	'refs/pull/50/head' of https://github.com/tealinuxos/tealinux-installer
+b6a9a2d2b943a7aa28d94fc1f54f9de99951c235	not-for-merge	'refs/pull/52/head' of https://github.com/tealinuxos/tealinux-installer
+6ce8ac59d8dd71c2e1d410025edc4abc32164ce2	not-for-merge	'refs/pull/54/head' of https://github.com/tealinuxos/tealinux-installer
+33c39f2a3b7c920db73dbc2c7d4cff64ddca0cb2	not-for-merge	'refs/pull/55/head' of https://github.com/tealinuxos/tealinux-installer
+0808016b83ee8d2a7dd791e08723dc8d5250da3b	not-for-merge	'refs/pull/56/head' of https://github.com/tealinuxos/tealinux-installer
+f068ecee3ea3d53399bff106dd8e38110e125a38	not-for-merge	'refs/pull/57/head' of https://github.com/tealinuxos/tealinux-installer
+aaad95a2cdb60d83d499deacfcf19b9ef59e7c1b	not-for-merge	'refs/pull/58/head' of https://github.com/tealinuxos/tealinux-installer
+b3544a559480392a455864fde833a5c3cb93333d	not-for-merge	'refs/pull/59/head' of https://github.com/tealinuxos/tealinux-installer
+8ea9d441f9c093844774e1c18d3714c0ea314866	not-for-merge	'refs/pull/6/head' of https://github.com/tealinuxos/tealinux-installer
+310adbe8c3f9c752fcda57b23a5c7a60f00e0950	not-for-merge	'refs/pull/60/head' of https://github.com/tealinuxos/tealinux-installer
+29a1c613717f4c71007d1ba07be5a9f28358f8a2	not-for-merge	'refs/pull/63/head' of https://github.com/tealinuxos/tealinux-installer
+9aa2d47f0a3ca85d92c78bd1891aecb0caaac537	not-for-merge	'refs/pull/64/head' of https://github.com/tealinuxos/tealinux-installer
+0e44c2f716190c7c200e3de0c5539027340bd7d2	not-for-merge	'refs/pull/65/head' of https://github.com/tealinuxos/tealinux-installer
+759c12f5d8a424130da70c0675e74f7ff1a1e5b5	not-for-merge	'refs/pull/66/head' of https://github.com/tealinuxos/tealinux-installer
+bcf34ea704e2bff9792f1d51eab2930438d53f01	not-for-merge	'refs/pull/67/head' of https://github.com/tealinuxos/tealinux-installer
+a52e4af74c0be3b75d5fafc1cac3f71c8b5f9767	not-for-merge	'refs/pull/68/head' of https://github.com/tealinuxos/tealinux-installer
+9c454b8d31b9925539688e5a7d3ba7975b5d56a7	not-for-merge	'refs/pull/69/head' of https://github.com/tealinuxos/tealinux-installer
+fb700710af7f04ad2d3d0cdb493647d8ab7603dd	not-for-merge	'refs/pull/7/head' of https://github.com/tealinuxos/tealinux-installer
+79c22316be5ce856e1343998f996684f53b7ac3c	not-for-merge	'refs/pull/70/head' of https://github.com/tealinuxos/tealinux-installer
+69b31534a9c60e9c43850c9301ed8ac05a23ca3f	not-for-merge	'refs/pull/71/head' of https://github.com/tealinuxos/tealinux-installer
+370dcf46d1ff6752797088bd64128d2d6aec3ca1	not-for-merge	'refs/pull/72/head' of https://github.com/tealinuxos/tealinux-installer
+d8db9cfb608437915806eeaa3dadba58540a1685	not-for-merge	'refs/pull/73/head' of https://github.com/tealinuxos/tealinux-installer
+b658963394b40492efbc96c04c16a94641999145	not-for-merge	'refs/pull/74/head' of https://github.com/tealinuxos/tealinux-installer
+117868662648623d5e6b7626aebcb2b30630c886	not-for-merge	'refs/pull/75/head' of https://github.com/tealinuxos/tealinux-installer
+9aa1c4b0ee60001a9444ad4ce680de01cadc65f2	not-for-merge	'refs/pull/76/head' of https://github.com/tealinuxos/tealinux-installer
+af6f0aa89e94543492708104d2c06fa107be8f52	not-for-merge	'refs/pull/77/head' of https://github.com/tealinuxos/tealinux-installer
+779488eef6daa4a19f9710e4bb4c85df490bad1c	not-for-merge	'refs/pull/78/head' of https://github.com/tealinuxos/tealinux-installer
+fa80c7f9a46b4ce1c5d76c06a1366deb14955593	not-for-merge	'refs/pull/79/head' of https://github.com/tealinuxos/tealinux-installer
+095a1fd8e2b66ef4226f68f8655ea09d7a7343c2	not-for-merge	'refs/pull/8/head' of https://github.com/tealinuxos/tealinux-installer
+6841100dbd3a0ded7f41defa9f43ef73ddb9024f	not-for-merge	'refs/pull/80/head' of https://github.com/tealinuxos/tealinux-installer
+f7a4331460a7f407c3c36705cb27ed422ff0b0d4	not-for-merge	'refs/pull/82/head' of https://github.com/tealinuxos/tealinux-installer
+cad77eb196bc3790c229a5683c64f1c32dd95ca3	not-for-merge	'refs/pull/84/head' of https://github.com/tealinuxos/tealinux-installer
+5e4a941ec34e7bca46f07e8b44ac8ee508e5be30	not-for-merge	'refs/pull/85/head' of https://github.com/tealinuxos/tealinux-installer
+f7ba3bcb386541c8a217c2183f8a6b220c89e92d	not-for-merge	'refs/pull/86/head' of https://github.com/tealinuxos/tealinux-installer
+874cd2974166dca439539faf6858edfb59816463	not-for-merge	'refs/pull/87/head' of https://github.com/tealinuxos/tealinux-installer
+9c816d497c7258180034d387a71461375a5780c6	not-for-merge	'refs/pull/88/head' of https://github.com/tealinuxos/tealinux-installer
+930b1e3781dfb1f052085ecdd075722fcd6d385a	not-for-merge	'refs/pull/89/head' of https://github.com/tealinuxos/tealinux-installer
+f5a0798384f783faf7d648b0925f5989372a3378	not-for-merge	'refs/pull/9/head' of https://github.com/tealinuxos/tealinux-installer
+4fa38b8c2ce886143032691b67b7dcf8767f0e23	not-for-merge	'refs/pull/90/head' of https://github.com/tealinuxos/tealinux-installer
+6ba5bc786ecb0c8a89242a8b885b8298b32b3e7e	not-for-merge	'refs/pull/91/head' of https://github.com/tealinuxos/tealinux-installer
+4a90ce8b73f45fc7e108a3203aa17a25206296fe	not-for-merge	'refs/pull/92/head' of https://github.com/tealinuxos/tealinux-installer
+2de365fea169ea9ae3d21e2e4e3b1fff445742e2	not-for-merge	'refs/pull/93/head' of https://github.com/tealinuxos/tealinux-installer
+7d4ae4fb15330bc6711159c94515c73ddabd8542	not-for-merge	tag 'v.0.0.1' of https://github.com/tealinuxos/tealinux-installer
+4a095acd9a4b8079e60c2cb9487d67d35127c30c	not-for-merge	tag 'v1.0' of https://github.com/tealinuxos/tealinux-installer
+1c0b1640062c25fe2b1b521606bcce0f84f25deb	not-for-merge	tag 'v2.0' of https://github.com/tealinuxos/tealinux-installer

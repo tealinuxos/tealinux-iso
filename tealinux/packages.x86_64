@@ -16,12 +16,13 @@ arch-install-scripts
 
 # installer
 tealinux-installer-git
+tealinux-modularity-git
+tealinux-modularitea-libs-git
 lshw
 dmidecode
 rsync
 fuse2
 gcc-libs
-webkit2gtk
 grub
 efibootmgr
 amd-ucode
