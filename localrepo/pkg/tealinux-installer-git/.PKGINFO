@@ -6,9 +6,9 @@ xdata = pkgtype=pkg
 pkgver = 2.0-1
 pkgdesc = TealinuxOS Installer, written in Tauri|Rust|SvelteKit.
 url = https://github.com/tealinuxos/tealinux-installer.git
-builddate = 1778397067
+builddate = 1778476110
 packager = Unknown Packager
-size = 14186469
+size = 14184933
 arch = x86_64
 license = GPL
 depend = webkit2gtk-4.1

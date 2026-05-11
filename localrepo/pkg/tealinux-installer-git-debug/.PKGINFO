@@ -6,9 +6,9 @@ xdata = pkgtype=debug
 pkgver = 2.0-1
 pkgdesc = Detached debugging symbols for tealinux-installer-git
 url = https://github.com/tealinuxos/tealinux-installer.git
-builddate = 1778397067
+builddate = 1778476110
 packager = Unknown Packager
-size = 4094024
+size = 4093096
 arch = x86_64
 license = GPL
 makedepend = grub
