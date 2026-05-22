@@ -14,3 +14,5 @@ tealinux-modularitea/tealinux-modularity/*
 # ignore webkit2gtk issue
 localrepo/localrepo.db.tar.xz
 localrepo/localrepo.files.tar.xz
+localrepo/localrepo.db
+localrepo/localrepo.files
