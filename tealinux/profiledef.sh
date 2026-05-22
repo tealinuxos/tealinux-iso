@@ -4,10 +4,10 @@
 # iso_edition="base"
 iso_edition="cosmic"
 # iso_edition="plasma"
-iso_name="tealinux-celia-${iso_edition}"
-iso_label="TEALINUX-CELIA_$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y.%m)"
+iso_name="tealinux-lilya-${iso_edition}"
+iso_label="TEALINUX-LILYA_$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y.%m)"
 iso_publisher="Tea Linux <https://tealinuxos.org>"
-iso_application="Tea Linux Celia"
+iso_application="Tea Linux Lilia"
 iso_version="$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y.%m.%d)"
 install_dir="arch"
 buildmodes=('iso')
@@ -21,10 +21,14 @@ airootfs_image_type="squashfs"
 # airootfs_image_tool_options=('-zlzma,109' -E 'ztailpacking,fragments,dedupe')
 
 # Faster compression
-airootfs_image_tool_options=('-comp' 'zstd' '-b' '256K' '-Xcompression-level' '1')
-bootstrap_tarball_compression=(zstd -c -T0 --long -15)
+# airootfs_image_tool_options=('-comp' 'zstd' '-b' '256K' '-Xcompression-level' '1')
+# bootstrap_tarball_compression=(zstd -c -T0 --long -15)
 
-## Fall back if above fails
+# Very Fast compression
+airootfs_image_tool_options=('-comp' 'zstd' '-b' '256K' '-Xcompression-level' '1')
+bootstrap_tarball_compression=(zstd -c -T0 --long -1)
+
+## Default compression (use this for prod system)
 # airootfs_image_tool_options=('-comp' 'xz' '-Xbcj' 'x86' '-b' '1M' '-Xdict-size' '1M')
 # bootstrap_tarball_compression=(zstd -c -T0 --long -19)
 
