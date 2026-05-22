@@ -1,3 +1,16 @@
 .work
 out
 *.zst
+
+# non bloated
+tealinux-installer/src/*
+tealinux-installer/tealinux-installer/*
+tealinux-installer/pkg/*
+
+tealinux-modularitea/pkg/*
+tealinux-modularitea/src/*
+tealinux-modularitea/tealinux-modularity/*
+
+# ignore webkit2gtk issue
+localrepo/localrepo.db.tar.xz
+localrepo/localrepo.files.tar.xz

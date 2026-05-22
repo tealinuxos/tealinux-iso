@@ -36,3 +36,7 @@ sudo rm -rf tealinux-modularitea/tealinux-modularity-git-debug-1.0-1-x86_64.pkg.
 sudo rm -rf tealinux-modularitea/tealinux-modularity/
 sudo rm -rf tealinux-modularitea-libs/
 sudo rm -rf tealinux/airootfs/localrepo/
+sudo rm -rf tealinux-installer/src/
+sudo rm -rf tealinux-installer/tealinux-installer/
+sudo rm -rf tealinux-installer/pkg/
+sudo rm -rf tealinux-installer/tealinux-installer-git-debug-2.0-1-x86_64.pkg.tar.zst

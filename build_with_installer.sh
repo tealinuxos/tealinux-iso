@@ -6,6 +6,18 @@ start_time=$(date +%s)
 
 LOCALREPO="$(pwd)/localrepo"
 
+
+# --- tealinux-installer ---
+if [[ ! -f "$LOCALREPO/tealinux-installer-git-2.0-1-x86_64.pkg.tar.zst" ]]; then
+    cd ./tealinux-installer
+    makepkg -fs
+    mv tealinux-installer-git-2.0-1-x86_64.pkg.tar.zst "$LOCALREPO"
+    cd ..
+else
+    echo "[SKIP] tealinux-installer already exists"
+fi
+
+
 # --- tealinux-modularity ---
 if [[ ! -f "$LOCALREPO/tealinux-modularity-git-1.0-1-x86_64.pkg.tar.zst" ]]; then
     cd ./tealinux-modularitea
@@ -32,7 +44,9 @@ cd "$LOCALREPO"
 repo-add localrepo.db.tar.xz \
     tealinux-installer-git-2.0-1-x86_64.pkg.tar.zst \
     tealinux-modularity-git-1.0-1-x86_64.pkg.tar.zst \
-    modularitea-libs-1.0-1-x86_64.pkg.tar.zst
+    modularitea-libs-1.0-1-x86_64.pkg.tar.zst \
+    os-prober-btrfs-1.83-2-x86_64.pkg.tar.zst \
+    paru-2.0.4-1-x86_64.pkg.tar.zst
 
 cd ..
 
