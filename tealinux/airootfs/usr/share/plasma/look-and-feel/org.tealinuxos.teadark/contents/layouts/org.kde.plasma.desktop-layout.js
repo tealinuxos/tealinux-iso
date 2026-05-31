@@ -158,7 +158,7 @@ var layout = {
                             "DialogWidth": "810"
                         },
                         "/General": {
-                            "launchers": "applications:systemsettings.desktop,preferred://filemanager,applications:org.kde.discover.desktop,preferred://browser,applications:org.kde.konsole.desktop"
+                            "launchers": "applications:systemsettings.desktop,preferred://filemanager,applications:tealinux-modularity.desktop,preferred://browser,applications:org.kde.konsole.desktop"
                         }
                     },
                     "plugin": "org.kde.plasma.icontasks"
