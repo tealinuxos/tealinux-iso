@@ -40,3 +40,5 @@ sudo rm -rf tealinux-installer/src/
 sudo rm -rf tealinux-installer/tealinux-installer/
 sudo rm -rf tealinux-installer/pkg/
 sudo rm -rf tealinux-installer/tealinux-installer-git-debug-2.0-1-x86_64.pkg.tar.zst
+sudo rm -rf localrepo/localrepo.db.tar.xz.old
+sudo rm -rf localrepo/localrepo.files.tar.xz.old
