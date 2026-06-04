@@ -16,3 +16,5 @@ localrepo/localrepo.db.tar.xz
 localrepo/localrepo.files.tar.xz
 localrepo/localrepo.db
 localrepo/localrepo.files
+localrepo/localrepo.db.tar.xz.old
+localrepo/localrepo.files.tar.xz.old

@@ -25,8 +25,8 @@ airootfs_image_type="squashfs"
 # bootstrap_tarball_compression=(zstd -c -T0 --long -15)
 
 # Very Fast compression
-airootfs_image_tool_options=('-comp' 'zstd' '-b' '256K' '-Xcompression-level' '1')
-bootstrap_tarball_compression=(zstd -c -T0 --long -1)
+airootfs_image_tool_options=('-comp' 'zstd' '-b' '256K' '-Xcompression-level' '2')
+bootstrap_tarball_compression=(zstd -c -T4 --long -1)
 
 ## Default compression (use this for prod system)
 # airootfs_image_tool_options=('-comp' 'xz' '-Xbcj' 'x86' '-b' '1M' '-Xdict-size' '1M')

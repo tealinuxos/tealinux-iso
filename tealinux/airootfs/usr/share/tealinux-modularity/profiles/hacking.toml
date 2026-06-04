@@ -1,0 +1,26 @@
+[meta]
+name = "Hacking"
+description = "Advancing your hacking environment with penetration testing & security tools"
+version = "1.0.0"
+author = "TeaLinuxOS Team"
+category = "security"
+
+[packages]
+install = [
+    "nmap",
+    "wireshark-qt",
+    "john",
+    "aircrack-ng",
+    "hashcat",
+    "whois",
+    "tcpdump",
+    "netcat",
+    "sqlmap"
+]
+
+aur = [
+    "burpsuite"
+]
+
+[services]
+enable = []
