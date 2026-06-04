@@ -36,4 +36,5 @@ file_permissions=(
   ["/etc/shadow"]="0:0:400"
   ["/etc/gshadow"]="0:0:400"
   ["/etc/skel/Desktop/tealinux-installer-git.desktop"]="0:0:755"
+  ["/etc/skel/Desktop/tealinux-modularity-git.desktop"]="0:0:755"
 )
