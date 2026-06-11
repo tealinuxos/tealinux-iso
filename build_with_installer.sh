@@ -49,7 +49,12 @@ repo-add localrepo.db.tar.xz \
     os-prober-btrfs-1.83-2-x86_64.pkg.tar.zst \
     paru-2.0.4-1-x86_64.pkg.tar.zst \
     darkly-0.5.38-1-x86_64.pkg.tar.zst \
-    
+    python-pywal16-1:3.8.15-1-any.pkg.tar.zst \
+    python-materialyoucolor-3.0.2-1-x86_64.pkg.tar.zst \
+    kde-material-you-colors-2.2.0-1-x86_64.pkg.tar.zst \
+    klassy-6.5.3-1-x86_64.pkg.tar.zst \
+    kwin-effects-better-blur-dx-2.4.1-1-x86_64.pkg.tar.zst \
+    plasma6-applets-panel-colorizer-7.2.0-1-any.pkg.tar.zst
 
 cd ..
 
