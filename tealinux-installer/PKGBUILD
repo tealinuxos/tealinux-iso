@@ -1,0 +1,37 @@
+# This is an example PKGBUILD file. Use this as a start to creating your own,
+# and remove these comments. For more information, see 'man PKGBUILD'.
+# NOTE: Please fill out the license field for your package! If it is unknown,
+# then please put 'unknown'.
+
+# Maintainer: Gagah Syuja <gghssa1@gmail.com>
+packager="Gagah Syuja <gghssa1@gmail.com>"
+pkgname=tealinux-installer-git
+pkgver=2.0
+pkgrel=1
+pkgdesc="TealinuxOS Installer, written in Tauri|Rust|SvelteKit."
+arch=("x86_64")
+url="https://github.com/tealinuxos/tealinux-installer.git"
+license=('GPL')
+depends=("webkit2gtk-4.1")
+makedepends=("grub" "rust")
+source=(
+    "git+${url}#branch=bugfix-bios"
+    "${pkgname}.desktop"
+)
+sha256sums=(
+    'SKIP'
+    '6a7887926ae2da7331961bd6631b5dd0aaf75744d02560c0903b0573e7ae15ac'
+)
+
+build() {
+    cd "${srcdir}/tealinux-installer"
+    bun install
+    TEALINUX_BUILD=prod bun run tauri build --no-bundle
+}
+
+package() {
+    install -Dm755 "${srcdir}/tealinux-installer/src-tauri/target/release/tealinux-installer" "${pkgdir}/usr/bin/tealinux-installer"
+
+    install -D -m644 ${pkgname}.desktop ${pkgdir}/usr/share/applications/${pkgname}.desktop
+#     install -D -m644 ${pkgname}.desktop ${pkgdir}/etc/xdg/autostart/${pkgname}.desktop
+}

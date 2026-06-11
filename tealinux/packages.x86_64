@@ -17,7 +17,7 @@ arch-install-scripts
 # installer
 tealinux-installer-git
 tealinux-modularity-git
-tealinux-modularitea-libs-git
+modularitea-libs
 lshw
 dmidecode
 rsync
@@ -178,3 +178,36 @@ bluez
 
 # Aur helper
 paru
+
+
+
+
+
+
+### FROM spesific aur ###
+# note: this is experimental, if iso size is exploded, try commenting out these files
+# darkly
+frameworkintegration5
+kcmutils5
+kcolorscheme
+kconfigwidgets5
+kcoreaddons
+kdecoration
+kguiaddons
+kiconthemes
+kiconthemes5
+kirigami2
+kwindowsystem
+kwindowsystem5
+libplasma
+qt6-declarative
+cmake
+extra-cmake-modules
+
+# python-pywal16 (dependency from kde-material-you-colors)
+# taken from https://aur.archlinux.org/packages/python-pywal16?all_deps=1#pkgdeps
+imagemagick
+procps-ng
+python
+sh
+git

@@ -1,9 +1,0 @@
-[core]
-	repositoryformatversion = 0
-	filemode = true
-	bare = true
-[remote "origin"]
-	url = file:///run/media/lbi/79d1bd4b-177d-4743-82d9-01867a1ec286/tealinux-2026/isokawmf/tealinux-iso/localrepo/tealinux-installer-src
-	tagOpt = --no-tags
-	fetch = +refs/*:refs/*
-	mirror = true
