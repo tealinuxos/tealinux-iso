@@ -2,12 +2,12 @@
 # shellcheck disable=SC2034
 
 # iso_edition="base"
-iso_edition="cosmic"
-# iso_edition="plasma"
-iso_name="tealinux-celia-${iso_edition}"
-iso_label="TEALINUX-CELIA_$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y.%m)"
+#iso_edition=""
+iso_edition="plasma"
+iso_name="tealinux-lily-${iso_edition}"
+iso_label="TEALINUX-LILY_$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y.%m)"
 iso_publisher="Tea Linux <https://tealinuxos.org>"
-iso_application="Tea Linux Celia"
+iso_application="Tea Linux Lilya"
 iso_version="$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y.%m.%d)"
 install_dir="arch"
 buildmodes=('iso')

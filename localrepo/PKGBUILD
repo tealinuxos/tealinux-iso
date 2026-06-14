@@ -25,6 +25,26 @@ sha256sums=(
 
 build() {
     cd "${srcdir}/tealinux-installer-src"
+
+    # Patch brotli crate: fix alloc-no-stdlib version mismatch (v2.0 vs v3.0)
+    # brotli 8.0.3 specifies alloc-no-stdlib = "2.0" but its sub-deps use v3.0.0,
+    # causing E0277 trait mismatch errors on Rust 1.96+
+    _brotli_src=$(find "$HOME/.cargo/registry/src" -maxdepth 1 -name 'index.crates.io-*' -print -quit)/brotli-8.0.3
+    if [ -d "$_brotli_src" ]; then
+        cp -r "$_brotli_src" src-tauri/brotli-patched
+    else
+        # Fetch it first so it's in the registry cache
+        cd src-tauri && cargo fetch && cd ..
+        _brotli_src=$(find "$HOME/.cargo/registry/src" -maxdepth 1 -name 'index.crates.io-*' -print -quit)/brotli-8.0.3
+        cp -r "$_brotli_src" src-tauri/brotli-patched
+    fi
+    sed -i 's/^version = "2\.0"$/version = "3.0"/' src-tauri/brotli-patched/Cargo.toml
+
+    # Add patch section to Cargo.toml if not present
+    if ! grep -q '\[patch.crates-io\]' src-tauri/Cargo.toml; then
+        printf '\n[patch.crates-io]\nbrotli = { path = "brotli-patched" }\n' >> src-tauri/Cargo.toml
+    fi
+
     bun install
     TEALINUX_BUILD=prod bun run tauri build --no-bundle
 }

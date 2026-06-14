@@ -1,0 +1,11 @@
+[KDE]
+LookAndFeelPackage=org.tealinuxos.tealight
+
+[General]
+ColorScheme=TeaLight
+
+[Icons]
+Theme=Reversal-green
+
+[KDE]
+widgetStyle=Darkly

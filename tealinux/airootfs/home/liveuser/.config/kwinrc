@@ -1,0 +1,15 @@
+[org.kde.kdecoration2]
+library=org.kde.klassy
+theme=Klassy
+BorderSize=Normal
+ButtonsOnLeft=M
+ButtonsOnRight=IAX
+
+[Windows]
+BorderlessMaximizedWindows=false
+
+[DesktopSwitcher]
+LayoutName=org.kde.breeze.desktop
+
+[WindowSwitcher]
+LayoutName=org.kde.breeze.desktop

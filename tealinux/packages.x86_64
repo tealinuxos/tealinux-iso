@@ -100,7 +100,6 @@ noto-fonts-emoji
 # Minimal set up plasma desktop
 plasma-desktop
 sddm
-plymouth
 
 # Terminal 
 konsole
