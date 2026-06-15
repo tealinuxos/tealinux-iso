@@ -17,12 +17,12 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.1
-
+import QtQuick
 
 Image {
     id: root
     source: "images/background.png"
+    fillMode: Image.PreserveAspectCrop
 
     property int stage
 
@@ -31,11 +31,14 @@ Image {
             introAnimation.running = true
         }
     }
-    Image {
+
+    Item {
         id: topRect
         anchors.horizontalCenter: parent.horizontalCenter
         y: root.height
-        source: "images/rectangle.svg"
+        width: 460
+        height: 290
+
         Image {
             source: "images/tea.svg"
             anchors.centerIn: parent
@@ -77,16 +80,7 @@ Image {
             PropertyAnimation {
                 property: "y"
                 target: topRect
-                to: root.height / 3
-                duration: 1000
-                easing.type: Easing.InOutBack
-                easing.overshoot: 1.0
-            }
-
-            PropertyAnimation {
-                property: "y"
-                target: bottomRect
-                to: 2 * (root.height / 3) - bottomRect.height
+                to: (root.height - topRect.height) / 2
                 duration: 1000
                 easing.type: Easing.InOutBack
                 easing.overshoot: 1.0

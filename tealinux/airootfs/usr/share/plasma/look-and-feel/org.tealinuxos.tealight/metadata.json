@@ -7,6 +7,7 @@
                 "Name": "Doscom"
             }
         ],
+        "Category": "",
         "Description": "Tea theme for KDE 6 with Light accent and modern look",
         "Id": "org.tealinuxos.tealight",
         "License": "GPLv3+",
@@ -14,6 +15,6 @@
         "Website": ""
     },
     "Keywords": "Desktop;Workspace;Appearance;Look and Feel;",
-    "X-Plasma-APIVersion": "2",
-    "X-Plasma-MainScript": "default"
+    "X-KDE-fallbackPackage": "org.kde.breeze.desktop",
+    "X-Plasma-APIVersion": "2"
 }
