@@ -5,9 +5,9 @@
 iso_edition="cosmic"
 # iso_edition="plasma"
 iso_name="tealinux-lilya-${iso_edition}"
-iso_label="TEALINUX-LILYA_$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y.%m)"
+iso_label="TEALINUX_$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y%m)"
 iso_publisher="Tea Linux <https://tealinuxos.org>"
-iso_application="Tea Linux Lilia"
+iso_application="Tea Linux Lilya"
 iso_version="$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y.%m.%d)"
 install_dir="arch"
 buildmodes=('iso')

@@ -15,7 +15,7 @@ license=('GPL')
 depends=("webkit2gtk-4.1")
 makedepends=("grub" "rust")
 source=(
-    "git+${url}#branch=bugfix-bios"
+    "git+${url}#branch=master"
     "${pkgname}.desktop"
 )
 sha256sums=(
