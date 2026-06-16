@@ -1,0 +1,27 @@
+[meta]
+name = "Backend"
+description = "Get Your API's and backend development without hassle"
+version = "1.0.0"
+author = "TeaLinuxOS Team"
+category = "development"
+
+[packages]
+install = [
+    "docker",
+    "docker-compose",
+    "postgresql",
+    "redis",
+    "nginx",
+    "git",
+    "nodejs",
+    "npm",
+    "python",
+    "go"
+]
+
+aur = [
+    "postman-bin"
+]
+
+[services]
+enable = ["docker", "postgresql", "redis", "nginx"]

@@ -1,0 +1,25 @@
+[meta]
+name = "Programmer"
+description = "Get your tools ready for software development"
+version = "1.0.0"
+author = "TeaLinuxOS Team"
+category = "development"
+
+[packages]
+install = [
+    "git",
+    "vim",
+    "neovim",
+    "base-devel",
+    "cmake",
+    "python",
+    "nodejs",
+    "npm"
+]
+
+aur = [
+    "visual-studio-code-bin"
+]
+
+[services]
+enable = []

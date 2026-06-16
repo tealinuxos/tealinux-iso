@@ -1,0 +1,25 @@
+[meta]
+name = "Devops"
+description = "Install all of DevOps tools, made for you"
+version = "1.0.0"
+author = "TeaLinuxOS Team"
+category = "development"
+
+[packages]
+install = [
+    "docker",
+    "docker-compose",
+    "ansible",
+    "terraform",
+    "kubectl",
+    "minikube",
+    "helm",
+    "git",
+    "code", 
+    "vim",
+    "htop"
+]
+
+[services]
+enable = ["docker"]
+user_enable = []

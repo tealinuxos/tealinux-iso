@@ -31,7 +31,14 @@ fi
 
 # --- modularitea-libs ---
 if [[ ! -f "$LOCALREPO/modularitea-libs-1.0-1-x86_64.pkg.tar.zst" ]]; then
-    git clone https://github.com/tealinuxos/tealinux-modularitea-libs.git
+    if [[ ! -d "tealinux-modularitea-libs" ]]; then
+        git clone https://github.com/tealinuxos/tealinux-modularitea-libs.git
+    else
+        cd tealinux-modularitea-libs
+        git pull
+        cd ..
+    fi
+
     cd tealinux-modularitea-libs
     makepkg -fs
     cp modularitea-libs-1.0-1-x86_64.pkg.tar.zst "$LOCALREPO"
