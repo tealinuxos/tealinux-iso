@@ -21,8 +21,8 @@ airootfs_image_type="squashfs"
 # airootfs_image_tool_options=('-zlzma,109' -E 'ztailpacking,fragments,dedupe')
 
 # Faster compression
-airootfs_image_tool_options=('-comp' 'zstd' '-b' '256K' '-Xcompression-level' '19')
-bootstrap_tarball_compression=(zstd -c -T0 --long -15)
+airootfs_image_tool_options=('-comp' 'zstd' '-b' '256K' '-Xcompression-level' '1')
+bootstrap_tarball_compression=(zstd -c -T0 --long -1)
 
 ## Fall back if above fails
 # airootfs_image_tool_options=('-comp' 'xz' '-Xbcj' 'x86' '-b' '1M' '-Xdict-size' '1M')
