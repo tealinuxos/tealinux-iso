@@ -61,7 +61,8 @@ repo-add localrepo.db.tar.xz \
     kde-material-you-colors-2.2.0-1-x86_64.pkg.tar.zst \
     klassy-6.5.3-1-x86_64.pkg.tar.zst \
     kwin-effects-better-blur-dx-2.4.1-1-x86_64.pkg.tar.zst \
-    plasma6-applets-panel-colorizer-7.2.0-1-any.pkg.tar.zst
+    plasma6-applets-panel-colorizer-7.2.0-1-any.pkg.tar.zst \
+    hojicha-ai-git-1.0-1-x86_64.pkg.tar.zst
 
 cd ..
 

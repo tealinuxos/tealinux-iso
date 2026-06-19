@@ -46,3 +46,12 @@ cd plasma6-applets-panel-colorizer
 makepkg -fs
 mv *.zst ../localrepo
 cd ..
+
+
+# # [ISO_NEED hochicha a]
+git clone https://github.com/tealinuxos/hojicha-AI.git
+cd hojicha-AI
+git switch openai
+makepkg -fs
+mv *.zst ../localrepo
+cd ..
