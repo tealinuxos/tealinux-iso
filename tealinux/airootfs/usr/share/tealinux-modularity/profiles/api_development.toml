@@ -1,0 +1,14 @@
+[meta]
+name = "API Development Pack"
+description = "Tools for API development and testing."
+version = "1.0.0"
+author = "TeaLinuxOS Team"
+category = "development"
+icon = "api_development.svg"
+
+[packages]
+install = [ "curl", "httpie", "jq", "docker", "docker-compose", "postgresql", "redis", "nginx", "git", "nodejs", "npm", "python", "go",]
+aur = [ "postman-bin", "insomnia-bin",]
+
+[services]
+enable = [ "docker", "postgresql", "redis", "nginx",]

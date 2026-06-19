@@ -1,0 +1,14 @@
+[meta]
+name = "Network & Security Pack"
+description = "Network monitoring and analysis tools."
+version = "1.0.0"
+author = "TeaLinuxOS Team"
+category = "security"
+icon = "network_security.svg"
+
+[packages]
+install = [ "wireshark-qt", "nmap", "net-tools", "traceroute", "tcpdump", "remmina", "john", "hydra", "sqlmap", "aircrack-ng", "hashcat", "whois", "netcat",]
+aur = [ "burpsuite",]
+
+[services]
+enable = []

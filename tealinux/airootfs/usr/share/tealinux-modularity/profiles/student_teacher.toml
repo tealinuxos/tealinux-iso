@@ -1,0 +1,14 @@
+[meta]
+name = "Student & Teacher Pack"
+description = "Tools to support student learning activities."
+version = "1.0.0"
+author = "TeaLinuxOS Team"
+category = "education"
+icon = "student_teacher.svg"
+
+[packages]
+install = [ "libreoffice-fresh", "vlc", "firefox", "simple-scan", "gnome-calculator", "gnome-calendar", "obs-studio", "poppler", "evince",]
+aur = [ "zoom",]
+
+[services]
+enable = []

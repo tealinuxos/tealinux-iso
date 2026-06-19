@@ -1,0 +1,14 @@
+[meta]
+name = "Database Pack"
+description = "Database engines and GUI tools."
+version = "1.0.0"
+author = "TeaLinuxOS Team"
+category = "development"
+icon = "database.svg"
+
+[packages]
+install = [ "mariadb-clients", "postgresql", "sqlite", "redis", "dbeaver",]
+aur = [ "beekeeper-studio-bin",]
+
+[services]
+enable = [ "postgresql", "redis",]

@@ -1,0 +1,14 @@
+[meta]
+name = "Mobile Pack"
+description = "Android application development package."
+version = "1.0.0"
+author = "TeaLinuxOS Team"
+category = "development"
+icon = "mobile.svg"
+
+[packages]
+install = [ "android-tools", "jdk-openjdk", "dart",]
+aur = [ "android-studio", "flutter",]
+
+[services]
+enable = []

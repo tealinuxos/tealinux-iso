@@ -1,0 +1,14 @@
+[meta]
+name = "C++ and Java Pack"
+description = "C and C++ development package."
+version = "1.0.0"
+author = "TeaLinuxOS Team"
+category = "development"
+icon = "cpp_java.svg"
+
+[packages]
+install = [ "gcc", "clang", "make", "cmake", "gdb", "valgrind", "codeblocks", "jdk-openjdk", "maven", "gradle", "ant",]
+aur = [ "intellij-idea-community-edition",]
+
+[services]
+enable = []

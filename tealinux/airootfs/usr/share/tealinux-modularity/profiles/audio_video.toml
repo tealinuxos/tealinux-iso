@@ -1,0 +1,14 @@
+[meta]
+name = "Audio & Video Production Pack"
+description = "Tools for audio recording and production."
+version = "1.0.0"
+author = "TeaLinuxOS Team"
+category = "multimedia"
+icon = "audio_video.svg"
+
+[packages]
+install = [ "audacity", "ardour", "easyeffects", "kdenlive", "obs-studio", "ffmpeg", "v4l-utils", "pavucontrol",]
+aur = [ "blender",]
+
+[services]
+enable = []

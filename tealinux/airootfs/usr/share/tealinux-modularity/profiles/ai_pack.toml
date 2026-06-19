@@ -1,0 +1,14 @@
+[meta]
+name = "AI Pack (Ollama & TensorFlow)"
+description = "Tools for AI development and integration."
+version = "1.0.0"
+author = "TeaLinuxOS Team"
+category = "development"
+icon = "ai_pack.svg"
+
+[packages]
+install = [ "python", "python-pip", "jupyter-notebook",]
+aur = [ "ollama-bin", "python-pytorch", "python-tensorflow",]
+
+[services]
+enable = [ "ollama",]

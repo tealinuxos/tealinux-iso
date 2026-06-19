@@ -1,0 +1,14 @@
+[meta]
+name = "Office Pack"
+description = "Complete office and productivity application package for students and office workers."
+version = "1.0.0"
+author = "TeaLinuxOS Team"
+category = "office"
+icon = "office.svg"
+
+[packages]
+install = [ "libreoffice-fresh", "evince", "fonts-noto", "simple-scan", "hunspell", "hunspell-id", "hyphen",]
+aur = [ "onlyoffice-bin", "ttf-ms-fonts",]
+
+[services]
+enable = []

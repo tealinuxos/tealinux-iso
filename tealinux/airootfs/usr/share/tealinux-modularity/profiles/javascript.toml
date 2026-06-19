@@ -1,0 +1,14 @@
+[meta]
+name = "JS Pack"
+description = "JavaScript development package (Node.js, npm, yarn, bun)."
+version = "1.0.0"
+author = "TeaLinuxOS Team"
+category = "development"
+icon = "javascript.svg"
+
+[packages]
+install = [ "nodejs", "npm", "yarn",]
+aur = [ "pnpm", "bun-bin",]
+
+[services]
+enable = []
