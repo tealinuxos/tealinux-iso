@@ -51,7 +51,7 @@ cd ..
 # # [ISO_NEED hochicha a]
 git clone https://github.com/tealinuxos/hojicha-AI.git
 cd hojicha-AI
-git switch openai
+git switch production
 makepkg -fs
 mv *.zst ../localrepo
 cd ..
