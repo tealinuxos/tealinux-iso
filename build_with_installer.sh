@@ -57,6 +57,22 @@ else
     echo "[SKIP] hojicha-AI already exists"
 fi
 
+
+# --- hojicha-ai ---
+if [[ -f "$LOCALREPO/hojicha-ai-git-1.0-1-x86_64.pkg.tar.zst" ]]; then
+    cd hojicha-AI
+    git pull
+    cd ..
+else
+    git clone https://github.com/tealinuxos/hojicha-AI.git
+fi
+
+cd hojicha-AI
+makepkg -fs
+cp hojicha-ai-git-1.0-1-x86_64.pkg.tar.zst "$LOCALREPO"
+cd ..
+
+
 # --- repo-add ---
 cd "$LOCALREPO"
 repo-add localrepo.db.tar.xz \
