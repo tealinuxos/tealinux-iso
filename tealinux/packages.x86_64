@@ -17,6 +17,9 @@ arch-install-scripts
 # installer
 tealinux-installer-git
 
+# AI
+hojicha-ai-git
+
 # modularitea
 tealinux-modularity-git
 modularitea-libs

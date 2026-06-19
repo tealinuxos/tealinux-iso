@@ -11,7 +11,7 @@ license=('GPL')
 depends=("webkit2gtk-4.1" "fastfetch")
 makedepends=("grub" "rust")
 source=(
-    "git+${url}#branch=development3"
+    "git+${url}#branch=development2"
     "${pkgname}.desktop"
 )
 sha256sums=(

@@ -39,6 +39,24 @@ else
     echo "[SKIP] modularitea-libs already exists"
 fi
 
+# --- hojicha ---
+if [[ ! -f "$LOCALREPO/hojicha-ai-git-1.0-1-x86_64.pkg.tar.zst" ]]; then
+    if [[ -d "hojicha-AI" ]]; then
+        cd hojicha-AI
+        git pull
+        git switch openai
+    else
+        git clone https://github.com/tealinuxos/hojicha-AI.git
+        cd hojicha-AI
+        git switch openai
+    fi
+    makepkg -fs
+    cp hojicha-ai-git-1.0-1-x86_64.pkg.tar.zst "$LOCALREPO"
+    cd ..
+else
+    echo "[SKIP] hojicha-AI already exists"
+fi
+
 # --- repo-add ---
 cd "$LOCALREPO"
 repo-add localrepo.db.tar.xz \
@@ -46,7 +64,8 @@ repo-add localrepo.db.tar.xz \
     tealinux-modularity-git-1.0-1-x86_64.pkg.tar.zst \
     modularitea-libs-1.0-1-x86_64.pkg.tar.zst \
     os-prober-btrfs-1.83-2-x86_64.pkg.tar.zst \
-    paru-2.0.4-1-x86_64.pkg.tar.zst
+    paru-2.0.4-1-x86_64.pkg.tar.zst \
+    hojicha-ai-git-1.0-1-x86_64.pkg.tar.zst
 
 cd ..
 
