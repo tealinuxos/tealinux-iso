@@ -9,6 +9,8 @@ LOCALREPO="$(pwd)/localrepo"
 git submodule update --init tealinux/grub/lorem-loader
 git submodule update --init tealinux/airootfs/usr/share/grub/themes/lorem-loader
 
+sh ./spesific_aur.sh
+
 # --- tealinux-installer ---
 if [[ ! -f "$LOCALREPO/tealinux-installer-git-2.0-1-x86_64.pkg.tar.zst" ]]; then
     cd ./tealinux-installer
@@ -61,7 +63,7 @@ repo-add localrepo.db.tar.xz \
     python-materialyoucolor-3.0.2-1-x86_64.pkg.tar.zst \
     kde-material-you-colors-2.2.0-1-x86_64.pkg.tar.zst \
     klassy-6.5.3-1-x86_64.pkg.tar.zst \
-    kwin-effects-better-blur-dx-2.4.1-1-x86_64.pkg.tar.zst \
+    kwin-effects-better-blur-dx-2.4.1-2-x86_64.pkg.tar.zst \
     plasma6-applets-panel-colorizer-7.2.0-1-any.pkg.tar.zst \
     hojicha-ai-git-1.0-1-x86_64.pkg.tar.zst
 

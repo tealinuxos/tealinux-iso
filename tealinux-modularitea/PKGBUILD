@@ -12,11 +12,9 @@ depends=("webkit2gtk-4.1" "fastfetch")
 makedepends=("grub" "rust")
 source=(
     "git+${url}#branch=development2"
-    "${pkgname}.desktop"
 )
 sha256sums=(
     'SKIP'
-    'd5bec85e7e1793931fd343b07f8aac4d62f017bd6912bed718feb291c3b09595'
 )
 
 build() {
@@ -31,6 +29,6 @@ build() {
 package() {
     install -Dm755 "${srcdir}/tealinux-modularity/src-tauri/target/release/tealinux-modularity" "${pkgdir}/usr/bin/tealinux-modularity"
 
-    install -D -m644 ${pkgname}.desktop ${pkgdir}/usr/share/applications/${pkgname}.desktop
+    # install -D -m644 ${pkgname}.desktop ${pkgdir}/usr/share/applications/${pkgname}.desktop
 #     install -D -m644 ${pkgname}.desktop ${pkgdir}/etc/xdg/autostart/${pkgname}.desktop
 }
