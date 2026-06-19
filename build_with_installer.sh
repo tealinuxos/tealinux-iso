@@ -6,7 +6,8 @@ start_time=$(date +%s)
 
 LOCALREPO="$(pwd)/localrepo"
 
-sh ./spesific_aur.sh
+git submodule update --init tealinux/grub/lorem-loader
+git submodule update --init tealinux/airootfs/usr/share/grub/themes/lorem-loader
 
 # --- tealinux-installer ---
 if [[ ! -f "$LOCALREPO/tealinux-installer-git-2.0-1-x86_64.pkg.tar.zst" ]]; then
