@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=ModulariTea
+Comment=TealinuxOS modularity manager
+Categories=System;
+Exec=/usr/bin/tealinux-modularity
+Icon=/usr/share/icons/tealinux-modularity.svg
+Terminal=false
+Type=Application
+StartupNotify=true

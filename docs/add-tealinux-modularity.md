@@ -155,7 +155,7 @@ Buat file `.desktop` di `localrepo/`:
 Name=TealinuxOS Modularity
 Categories=Settings
 Exec=/usr/bin/tealinux-modularity
-Icon=/usr/share/icons/tealinux-modularity.png
+Icon=/usr/share/icons/tealinux-modularity.svg
 Terminal=false
 Type=Application
 ```
