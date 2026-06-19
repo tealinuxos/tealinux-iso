@@ -1,0 +1,14 @@
+[meta]
+name = "Design Pack"
+description = "Graphic design and illustration package for creators."
+version = "1.0.0"
+author = "TeaLinuxOS Team"
+category = "multimedia"
+icon = "design.svg"
+
+[packages]
+install = [ "gimp", "inkscape", "krita", "blender", "font-manager",]
+aur = [ "darktable", "scribus",]
+
+[services]
+enable = []

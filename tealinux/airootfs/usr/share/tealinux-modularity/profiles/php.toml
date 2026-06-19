@@ -1,0 +1,14 @@
+[meta]
+name = "PHP Pack"
+description = "Modern native Linux PHP stack for Laravel, CodeIgniter, and PHP development."
+version = "1.0.0"
+author = "TeaLinuxOS Team"
+category = "development"
+icon = "php.svg"
+
+[packages]
+install = [ "apache", "nginx", "php", "php-fpm", "php-sqlite", "php-gd", "mariadb", "composer", "phpmyadmin", "redis", "curl", "git", "xdebug", "php-apache", "perl",]
+aur = []
+
+[services]
+enable = [ "mariadb", "redis", "nginx", "php-fpm", "httpd",]

@@ -1,0 +1,14 @@
+[meta]
+name = "Developer Essentials Pack"
+description = "Basic Linux developer package with essential tools."
+version = "1.0.0"
+author = "TeaLinuxOS Team"
+category = "development"
+icon = "developer_essentials.svg"
+
+[packages]
+install = [ "git", "curl", "wget", "base-devel", "unzip", "zip", "nano", "vim", "htop", "tree", "openssh", "neovim", "cmake", "python", "nodejs", "npm",]
+aur = [ "visual-studio-code-bin", "neovim",]
+
+[services]
+enable = []

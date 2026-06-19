@@ -1,0 +1,14 @@
+[meta]
+name = "Master Presets"
+description = "Environment for AI development and data science."
+version = "1.0.0"
+author = "TeaLinuxOS Team"
+category = "development"
+icon = "master_presets.svg"
+
+[packages]
+install = [ "ipython", "jupyter-notebook", "jupyterlab", "python", "python-matplotlib", "python-numpy", "python-pandas", "python-pip", "python-scipy", "python-seaborn", "ardour", "audacity", "easyeffects", "ffmpeg", "kdenlive", "obs-studio", "pavucontrol", "v4l-utils", "blender", "flameshot", "font-manager", "gimp", "gst-plugins-bad", "gst-plugins-good", "gst-plugins-ugly", "gstreamer", "imagemagick", "inkscape", "krita", "noto-fonts", "noto-fonts-cjk", "noto-fonts-emoji", "vlc", "apache", "buildah", "composer", "curl", "dbeaver", "docker", "docker-compose", "git", "mariadb", "mariadb-clients", "nginx", "nodejs", "npm", "php", "php-fpm", "php-gd", "php-sqlite", "phpmyadmin", "podman", "postgresql", "redis", "sqlite", "xdebug", "yarn", "base-devel", "htop", "httpie", "jq", "nano", "openssh", "tree", "unzip", "vim", "wget", "zip", "evince", "firefox", "fonts-noto", "hunspell", "hunspell-id", "hyphen", "libreoffice-fresh", "qbittorrent", "simple-scan", "telegram-desktop", "thunderbird", "aircrack-ng", "helm", "hydra", "john", "k9s", "kubectl", "minikube", "net-tools", "nmap", "remmina", "sqlmap", "tcpdump", "traceroute", "wireshark-qt",]
+aur = [ "ollama-bin", "python-pytorch", "python-tensorflow", "r", "blender", "darktable", "handbrake", "obs-studio", "scribus", "ttf-ms-fonts", "beekeeper-studio-bin", "bun-bin", "lazydocker-bin", "pnpm", "insomnia-bin", "neovim", "postman-bin", "visual-studio-code-bin", "chromium", "discord", "onlyoffice-bin", "burpsuite",]
+
+[services]
+enable = [ "ollama", "docker", "mariadb", "nginx", "php-fpm", "postgresql", "redis",]

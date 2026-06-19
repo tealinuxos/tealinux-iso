@@ -1,0 +1,14 @@
+[meta]
+name = "Kubernetes & Cloud Pack"
+description = "Kubernetes development package."
+version = "1.0.0"
+author = "TeaLinuxOS Team"
+category = "server"
+icon = "kubernetes_cloud.svg"
+
+[packages]
+install = [ "kubectl", "minikube", "helm", "k9s", "aws-cli", "terraform", "ansible",]
+aur = [ "azure-cli", "google-cloud-cli",]
+
+[services]
+enable = []

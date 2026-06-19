@@ -1,0 +1,14 @@
+[meta]
+name = "Internet & Browser Pack"
+description = "Internet and communication package for browsing, email, and chat needs."
+version = "1.0.0"
+author = "TeaLinuxOS Team"
+category = "internet"
+icon = "internet.svg"
+
+[packages]
+install = [ "firefox", "thunderbird", "telegram-desktop", "qbittorrent", "chromium",]
+aur = [ "discord", "chromium", "brave-bin",]
+
+[services]
+enable = []

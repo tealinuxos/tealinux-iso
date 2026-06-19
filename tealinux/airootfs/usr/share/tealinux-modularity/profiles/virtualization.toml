@@ -1,0 +1,20 @@
+[meta]
+name = "Virtualization Pack"
+description = "Virtual Machine Manager and tools."
+version = "1.0.0"
+author = "TeaLinuxOS Team"
+category = "server"
+
+[packages]
+install = [
+    "virtualbox",
+    "virtualbox-host-modules-arch",
+    "qemu-full",
+    "virt-manager",
+    "libvirt"
+]
+
+aur = []
+
+[services]
+enable = ["libvirtd", "vboxdrv"]

@@ -1,0 +1,14 @@
+[meta]
+name = "Utility & Driver Pack"
+description = "Additional system utility tools."
+version = "1.0.0"
+author = "TeaLinuxOS Team"
+category = "system"
+icon = "utility_driver.svg"
+
+[packages]
+install = [ "gparted", "bleachbit", "timeshift", "baobab", "cups", "gutenprint", "foomatic-db-engine", "foomatic-db", "foomatic-db-ppds", "foomatic-db-nonfree", "sane", "linux-firmware", "orca", "espeak-ng", "speech-dispatcher", "zsh", "tmux", "fzf", "bat", "eza", "btop", "fastfetch",]
+aur = [ "oh-my-zsh-git",]
+
+[services]
+enable = [ "cups",]

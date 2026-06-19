@@ -1,0 +1,14 @@
+[meta]
+name = "Python Pack"
+description = "Basic Python and Data Science development package."
+version = "1.0.0"
+author = "TeaLinuxOS Team"
+category = "development"
+icon = "python.svg"
+
+[packages]
+install = [ "python", "python-pip", "ipython", "jupyter-notebook", "python-numpy", "python-pandas", "python-matplotlib", "python-scipy",]
+aur = []
+
+[services]
+enable = []

@@ -1,0 +1,14 @@
+[meta]
+name = "Go & Rust Developer Pack"
+description = "Go (Golang) development package."
+version = "1.0.0"
+author = "TeaLinuxOS Team"
+category = "development"
+icon = "go_rust.svg"
+
+[packages]
+install = [ "go", "gopls", "delve", "rustup", "cargo", "rust-analyzer",]
+aur = []
+
+[services]
+enable = []
