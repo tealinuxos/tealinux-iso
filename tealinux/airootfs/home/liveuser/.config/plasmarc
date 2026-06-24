@@ -1,0 +1,5 @@
+[Theme]
+name=org.tealinuxos.teaglass
+
+[Wallpapers]
+usersWallpapers=/usr/share/backgrounds/tea-dark.jpg,/usr/share/backgrounds/tea-light.jpg,/usr/share/backgrounds/fracture.png,/usr/share/backgrounds/metro.png,/usr/share/backgrounds/refraglow.png

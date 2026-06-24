@@ -1,0 +1,18 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "go.doscom@gmail.com",
+                "Name": "Doscom"
+            }
+        ],
+        "Category": "",
+        "Description": "Simple glasslike design",
+        "EnabledByDefault": true,
+        "Id": "org.tealinuxos.teaglass",
+        "License": "GPLv3",
+        "Name": "Tea Glass",
+        "Website": ""
+    },
+    "X-Plasma-APIVersion": "2"
+}

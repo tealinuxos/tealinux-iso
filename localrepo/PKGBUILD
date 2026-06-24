@@ -13,9 +13,9 @@ arch=("x86_64")
 url="https://github.com/tealinuxos/tealinux-installer.git"
 license=('GPL')
 depends=("webkit2gtk-4.1")
-makedepends=("grub" "rust")
+makedepends=("grub" "rust" "bun")
 source=(
-    "git+${url}"
+    "tealinux-installer-src::git+https://github.com/tealinuxos/tealinux-installer.git"
     "${pkgname}.desktop"
 )
 sha256sums=(
@@ -24,13 +24,45 @@ sha256sums=(
 )
 
 build() {
-    cd "${srcdir}/tealinux-installer"
+    cd "${srcdir}/tealinux-installer-src"
+
+    # Patch brotli crate: fix alloc-no-stdlib version mismatch (v2.0 vs v3.0)
+    # brotli 8.0.3, brotli-decompressor 5.0.3, and alloc-stdlib 0.2.4 all
+    # specify alloc-no-stdlib = ">=2.0.4, <3" but need v3.0.0 to avoid
+    # E0277 trait mismatch errors on Rust 1.96+
+    _registry=$(find "$HOME/.cargo/registry/src" -maxdepth 1 -name 'index.crates.io-*' -print -quit)
+    _brotli_src="$_registry/brotli-8.0.3"
+    _brotli_dec_src="$_registry/brotli-decompressor-5.0.3"
+    _alloc_stdlib_src="$_registry/alloc-stdlib-0.2.4"
+
+    if [ ! -d "$_brotli_src" ]; then
+        cd src-tauri && cargo fetch && cd ..
+        _registry=$(find "$HOME/.cargo/registry/src" -maxdepth 1 -name 'index.crates.io-*' -print -quit)
+        _brotli_src="$_registry/brotli-8.0.3"
+        _brotli_dec_src="$_registry/brotli-decompressor-5.0.3"
+        _alloc_stdlib_src="$_registry/alloc-stdlib-0.2.4"
+    fi
+
+    cp -r "$_brotli_src" src-tauri/brotli-patched
+    cp -r "$_brotli_dec_src" src-tauri/brotli-decompressor-patched
+    cp -r "$_alloc_stdlib_src" src-tauri/alloc-stdlib-patched
+
+    # Patch alloc-no-stdlib version to "3.0" in all three crates
+    sed -i 's/^version = "2\.0"$/version = "3.0"/' src-tauri/brotli-patched/Cargo.toml
+    sed -i 's/^version = ">=2\.0\.4, <3"$/version = "3.0"/' src-tauri/brotli-decompressor-patched/Cargo.toml
+    sed -i 's/^version = ">=2\.0\.4, <3\.0\.0"$/version = "3.0"/' src-tauri/alloc-stdlib-patched/Cargo.toml
+
+    # Add patch section to Cargo.toml if not present
+    if ! grep -q '\[patch.crates-io\]' src-tauri/Cargo.toml; then
+        printf '\n[patch.crates-io]\nbrotli = { path = "brotli-patched" }\nbrotli-decompressor = { path = "brotli-decompressor-patched" }\nalloc-stdlib = { path = "alloc-stdlib-patched" }\n' >> src-tauri/Cargo.toml
+    fi
+
     bun install
     TEALINUX_BUILD=prod bun run tauri build --no-bundle
 }
 
 package() {
-    install -Dm755 "${srcdir}/tealinux-installer/src-tauri/target/release/tealinux-installer" "${pkgdir}/usr/bin/tealinux-installer"
+    install -Dm755 "${srcdir}/tealinux-installer-src/src-tauri/target/release/tealinux-installer" "${pkgdir}/usr/bin/tealinux-installer"
 
     install -D -m644 ${pkgname}.desktop ${pkgdir}/usr/share/applications/${pkgname}.desktop
 #     install -D -m644 ${pkgname}.desktop ${pkgdir}/etc/xdg/autostart/${pkgname}.desktop

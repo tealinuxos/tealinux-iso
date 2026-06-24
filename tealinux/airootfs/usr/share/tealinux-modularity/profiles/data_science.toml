@@ -1,0 +1,14 @@
+[meta]
+name = "Data Science Pack"
+description = "Package for data analysis and science."
+version = "1.0.0"
+author = "TeaLinuxOS Team"
+category = "development"
+icon = "data_science.svg"
+
+[packages]
+install = [ "python-pandas", "python-numpy", "python-matplotlib", "python-seaborn", "jupyterlab", "octave", "scilab",]
+aur = [ "r", "geogebra",]
+
+[services]
+enable = []

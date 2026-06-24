@@ -1,0 +1,14 @@
+[meta]
+name = "Backup, Optimization & Remote Pack"
+description = "Tools for system and data backup."
+version = "1.0.0"
+author = "TeaLinuxOS Team"
+category = "system"
+icon = "backup_optimization.svg"
+
+[packages]
+install = [ "timeshift", "rsync", "deja-dup", "tlp", "powertop", "brightnessctl", "remmina",]
+aur = [ "zoom", "teams", "anydesk-bin",]
+
+[services]
+enable = [ "tlp",]

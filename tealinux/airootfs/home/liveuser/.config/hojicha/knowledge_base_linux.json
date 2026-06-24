@@ -1,0 +1,1962 @@
+[
+  {
+    "id": "mem-free",
+    "command": "free -h",
+    "description": "Menampilkan statistik penggunaan memori fisik dan swap sistem (Linux)",
+    "keywords": ["ram", "memori", "memory", "free", "penggunaan memori", "sisa ram", "cek ram", "free -h"],
+    "category": "Memory",
+    "risk": "Safe",
+    "example": "free -h",
+    "beginner_tip": "Gunakan flag -h agar ukurannya mudah dibaca manusia (misal: 4G, 512M)"
+  },
+  {
+    "id": "mem-vmstat",
+    "command": "vmstat -s",
+    "description": "Statistik memori virtual sistem secara detail (Linux)",
+    "keywords": ["vmstat", "virtual memory", "memory stats", "statistik memori"],
+    "category": "Memory",
+    "risk": "Safe",
+    "example": "vmstat -s",
+    "beginner_tip": "Gunakan free -h untuk tampilan yang lebih sederhana"
+  },
+  {
+    "id": "cpu-top",
+    "command": "top -bn1 | head -20",
+    "description": "Menampilkan proses yang sedang berjalan dan penggunaan CPU secara real-time (Linux)",
+    "keywords": ["cpu", "prosesor", "processor", "top", "beban cpu", "load", "penggunaan cpu"],
+    "category": "Cpu",
+    "risk": "Safe",
+    "example": "top -bn1 | head -20",
+    "beginner_tip": "Tekan 'q' untuk keluar dari mode interaktif top jika dijalankan tanpa batasan iterasi"
+  },
+  {
+    "id": "cpu-htop",
+    "command": "htop",
+    "description": "Monitor proses interaktif dengan tampilan yang lebih ramah pengguna dari top",
+    "keywords": ["htop", "monitor", "proses", "cpu", "interaktif"],
+    "category": "Cpu",
+    "risk": "Safe",
+    "example": "htop",
+    "beginner_tip": "htop mungkin perlu diinstal terlebih dahulu: sudo apt install htop"
+  },
+  {
+    "id": "cpu-info",
+    "command": "lscpu",
+    "description": "Menampilkan informasi detail tentang CPU seperti jumlah core dan arsitektur (Linux)",
+    "keywords": ["info cpu", "spesifikasi cpu", "lscpu", "core", "processor info"],
+    "category": "Cpu",
+    "risk": "Safe",
+    "example": "lscpu",
+    "beginner_tip": "CPU(s) menunjukkan jumlah total logical processor yang dimiliki"
+  },
+  {
+    "id": "cpu-uptime",
+    "command": "uptime",
+    "description": "Menampilkan sudah berapa lama sistem berjalan dan rata-rata beban CPU",
+    "keywords": ["uptime", "berapa lama nyala", "load average", "beban sistem"],
+    "category": "Cpu",
+    "risk": "Safe",
+    "example": "uptime",
+    "beginner_tip": "Load average di bawah jumlah core CPU Anda berarti sistem tidak terbebani"
+  },
+  {
+    "id": "disk-df",
+    "command": "df -h",
+    "description": "Menampilkan penggunaan ruang disk semua partisi yang terpasang",
+    "keywords": ["disk", "penyimpanan", "storage", "df", "ruang disk", "kapasitas disk", "cek disk"],
+    "category": "Disk",
+    "risk": "Safe",
+    "example": "df -h",
+    "beginner_tip": "Kolom 'Use%' menunjukkan persentase disk yang sudah terpakai"
+  },
+  {
+    "id": "disk-du",
+    "command": "du -sh *",
+    "description": "Menampilkan ukuran setiap file dan folder di direktori saat ini",
+    "keywords": ["ukuran folder", "ukuran file", "du", "folder size", "besar folder"],
+    "category": "Disk",
+    "risk": "Safe",
+    "example": "du -sh *",
+    "beginner_tip": "Gunakan du -sh /path/to/folder untuk melihat ukuran folder tertentu"
+  },
+  {
+    "id": "disk-du-sort",
+    "command": "du -sh * | sort -h",
+    "description": "Menampilkan ukuran file/folder diurutkan dari terkecil ke terbesar (Linux)",
+    "keywords": ["urut ukuran", "folder terbesar", "file terbesar", "sort size"],
+    "category": "Disk",
+    "risk": "Safe",
+    "example": "du -sh * | sort -h",
+    "beginner_tip": "Item paling bawah adalah yang paling besar ukurannya"
+  },
+  {
+    "id": "net-ping",
+    "command": "ping -c 4 google.com",
+    "description": "Mengecek koneksi internet dengan mengirim 4 paket ke google.com",
+    "keywords": ["ping", "cek internet", "koneksi internet", "internet", "konek", "network"],
+    "category": "Network",
+    "risk": "Safe",
+    "example": "ping -c 4 google.com",
+    "beginner_tip": "Angka 'time' menunjukkan latensi dalam milidetik — semakin kecil semakin bagus"
+  },
+  {
+    "id": "net-ip",
+    "command": "ip addr show",
+    "description": "Menampilkan semua interface jaringan beserta alamat IP-nya (Linux)",
+    "keywords": ["ip address", "alamat ip", "ip addr", "ip saya", "lihat ip", "cek ip"],
+    "category": "Network",
+    "risk": "Safe",
+    "example": "ip addr show",
+    "beginner_tip": "Cari 'inet' untuk menemukan alamat IPv4 Anda"
+  },
+  {
+    "id": "net-ifconfig",
+    "command": "ifconfig",
+    "description": "Menampilkan konfigurasi interface jaringan lengkap",
+    "keywords": ["ifconfig", "network interface", "ip address", "alamat ip"],
+    "category": "Network",
+    "risk": "Safe",
+    "example": "ifconfig",
+    "beginner_tip": "Pada sistem modern, gunakan 'ip addr' sebagai gantinya"
+  },
+  {
+    "id": "net-ss",
+    "command": "ss -tuln",
+    "description": "Menampilkan semua port yang sedang terbuka dan mendengarkan koneksi (Linux)",
+    "keywords": ["port", "listening port", "open port", "ss", "netstat", "port terbuka"],
+    "category": "Network",
+    "risk": "Safe",
+    "example": "ss -tuln",
+    "beginner_tip": "Port yang statusnya LISTEN berarti aktif menerima koneksi dari luar"
+  },
+  {
+    "id": "net-wget",
+    "command": "wget -q --spider google.com",
+    "description": "Mengecek apakah ada koneksi internet tanpa mengunduh file",
+    "keywords": ["cek internet", "test internet", "tes koneksi"],
+    "category": "Network",
+    "risk": "Safe",
+    "example": "wget -q --spider google.com && echo OK",
+    "beginner_tip": "Jika keluar 'OK' berarti koneksi internet aktif"
+  },
+  {
+    "id": "proc-ps",
+    "command": "ps aux",
+    "description": "Menampilkan semua proses yang sedang berjalan di sistem",
+    "keywords": ["proses", "process", "ps", "daftar proses", "running process"],
+    "category": "Process",
+    "risk": "Safe",
+    "example": "ps aux",
+    "beginner_tip": "Kolom %MEM dan %CPU menunjukkan berapa banyak sumber daya yang digunakan"
+  },
+  {
+    "id": "proc-ps-grep",
+    "command": "ps aux | grep",
+    "description": "Mencari proses tertentu berdasarkan namanya",
+    "keywords": ["cari proses", "find process", "proses nama", "grep process"],
+    "category": "Process",
+    "risk": "Safe",
+    "example": "ps aux | grep firefox",
+    "beginner_tip": "Ganti 'firefox' dengan nama aplikasi yang ingin Anda cari"
+  },
+  {
+    "id": "proc-kill",
+    "command": "kill",
+    "description": "Menghentikan sebuah proses berdasarkan PID-nya",
+    "keywords": ["kill", "hentikan proses", "matikan proses", "stop process"],
+    "category": "Process",
+    "risk": "Moderate",
+    "example": "kill 1234",
+    "beginner_tip": "Gunakan 'ps aux | grep namaapp' untuk menemukan PID suatu proses"
+  },
+  {
+    "id": "proc-pkill",
+    "command": "pkill",
+    "description": "Menghentikan proses berdasarkan namanya tanpa perlu tahu PID",
+    "keywords": ["pkill", "hentikan aplikasi", "matikan aplikasi", "stop app by name"],
+    "category": "Process",
+    "risk": "Moderate",
+    "example": "pkill firefox",
+    "beginner_tip": "Hati-hati: pkill akan menghentikan semua proses dengan nama tersebut"
+  },
+  {
+    "id": "file-cd",
+    "command": "cd",
+    "description": "Berpindah ke direktori/folder lain di dalam sistem file",
+    "keywords": ["cd", "pindah folder", "pindah direktori", "masuk ke folder", "masuk ke direktori", "masuk", "mundur", "kembali", "change directory", "pindah"],
+    "category": "Files",
+    "risk": "Safe",
+    "example": "cd nama_folder",
+    "beginner_tip": "Gunakan 'cd ..' untuk naik/mundur satu tingkat, atau 'cd ~' untuk kembali ke direktori home."
+  },
+  {
+    "id": "file-ls",
+    "command": "ls -la",
+    "description": "Menampilkan semua file dan folder di direktori saat ini termasuk yang tersembunyi",
+    "keywords": ["ls", "lihat file", "daftar file", "list file", "folder isi", "isi folder"],
+    "category": "Files",
+    "risk": "Safe",
+    "example": "ls -la",
+    "beginner_tip": "File dengan nama diawali titik (.) adalah file tersembunyi di Linux"
+  },
+  {
+    "id": "file-pwd",
+    "command": "pwd",
+    "description": "Menampilkan lokasi direktori saat ini (posisi Anda di sistem file)",
+    "keywords": ["pwd", "lokasi", "posisi", "current directory", "di mana saya", "folder sekarang", "saya dimana", "dimana saya", "saya berada dimana", "berada dimana", "di mana", "dimana"],
+    "category": "Files",
+    "risk": "Safe",
+    "example": "pwd",
+    "beginner_tip": "pwd singkatan dari Print Working Directory"
+  },
+  {
+    "id": "file-find",
+    "command": "find . -name",
+    "description": "Mencari file berdasarkan nama di dalam direktori saat ini dan sub-direktori",
+    "keywords": ["cari file", "find file", "mencari", "search file", "temukan file"],
+    "category": "Files",
+    "risk": "Safe",
+    "example": "find . -name \"*.txt\"",
+    "beginner_tip": "Gunakan tanda bintang (*) sebagai wildcard, misal: *.pdf untuk semua file PDF"
+  },
+  {
+    "id": "file-mkdir",
+    "command": "mkdir",
+    "description": "Membuat folder baru",
+    "keywords": ["buat folder", "mkdir", "create folder", "buat direktori", "new folder"],
+    "category": "Files",
+    "risk": "Safe",
+    "example": "mkdir nama_folder",
+    "beginner_tip": "Gunakan mkdir -p untuk membuat folder berserta folder induknya sekaligus"
+  },
+  {
+    "id": "file-cat",
+    "command": "cat",
+    "description": "Menampilkan isi sebuah file teks di terminal",
+    "keywords": ["baca file", "isi file", "cat", "tampilkan file", "lihat isi"],
+    "category": "Files",
+    "risk": "Safe",
+    "example": "cat namafile.txt",
+    "beginner_tip": "Untuk file panjang, gunakan 'less namafile.txt' agar bisa discroll"
+  },
+  {
+    "id": "file-less",
+    "command": "less",
+    "description": "Membuka file teks panjang dengan tampilan yang bisa di-scroll",
+    "keywords": ["less", "baca file panjang", "scroll file", "lihat file besar"],
+    "category": "Files",
+    "risk": "Safe",
+    "example": "less namafile.txt",
+    "beginner_tip": "Tekan 'q' untuk keluar, 'space' untuk halaman berikutnya"
+  },
+  {
+    "id": "file-cp",
+    "command": "cp",
+    "description": "Menyalin file atau folder ke lokasi lain",
+    "keywords": ["copy file", "salin file", "cp", "duplikat file", "copy"],
+    "category": "Files",
+    "risk": "Safe",
+    "example": "cp file.txt backup.txt",
+    "beginner_tip": "Gunakan cp -r untuk menyalin seluruh folder beserta isinya"
+  },
+  {
+    "id": "file-mv",
+    "command": "mv",
+    "description": "Memindahkan atau mengganti nama file/folder",
+    "keywords": ["pindah file", "rename file", "mv", "ganti nama", "move file"],
+    "category": "Files",
+    "risk": "Moderate",
+    "example": "mv file_lama.txt file_baru.txt",
+    "beginner_tip": "mv juga bisa digunakan untuk rename: mv namalama.txt namabaru.txt"
+  },
+  {
+    "id": "file-rm",
+    "command": "rm",
+    "description": "Menghapus file (tidak bisa di-undo, hati-hati!)",
+    "keywords": ["hapus file", "delete file", "rm", "remove file"],
+    "category": "Files",
+    "risk": "Moderate",
+    "example": "rm namafile.txt",
+    "beginner_tip": "HATI-HATI: file yang dihapus tidak masuk Trash dan tidak bisa dikembalikan"
+  },
+  {
+    "id": "file-grep",
+    "command": "grep",
+    "description": "Mencari teks tertentu di dalam sebuah file atau output",
+    "keywords": ["cari teks", "grep", "search text", "temukan kata", "filter teks"],
+    "category": "Text",
+    "risk": "Safe",
+    "example": "grep \"kata kunci\" namafile.txt",
+    "beginner_tip": "Tambahkan -i untuk pencarian yang tidak memperhatikan huruf besar/kecil"
+  },
+  {
+    "id": "perm-chmod",
+    "command": "chmod",
+    "description": "Mengubah izin akses (permission) sebuah file atau folder",
+    "keywords": ["chmod", "permission", "izin", "akses file", "hak akses"],
+    "category": "Permissions",
+    "risk": "Moderate",
+    "example": "chmod 755 script.sh",
+    "beginner_tip": "755 berarti pemilik bisa baca/tulis/jalankan, orang lain hanya baca/jalankan"
+  },
+  {
+    "id": "perm-chown",
+    "command": "chown",
+    "description": "Mengubah pemilik sebuah file atau folder",
+    "keywords": ["chown", "owner", "pemilik file", "ganti pemilik"],
+    "category": "Permissions",
+    "risk": "Moderate",
+    "example": "chown user:group namafile",
+    "beginner_tip": "Biasanya perlu sudo untuk mengubah pemilik file"
+  },
+  {
+    "id": "pkg-update",
+    "command": "sudo apt update",
+    "description": "Memperbarui daftar package yang tersedia dari repository (Linux)",
+    "keywords": ["update", "perbarui", "apt update", "refresh package"],
+    "category": "Package",
+    "risk": "Moderate",
+    "example": "sudo apt update",
+    "beginner_tip": "Selalu jalankan apt update sebelum menginstal software baru"
+  },
+  {
+    "id": "pkg-upgrade",
+    "command": "sudo apt upgrade",
+    "description": "Mengupgrade semua package yang sudah terinstal ke versi terbaru (Linux)",
+    "keywords": ["upgrade", "perbarui software", "apt upgrade", "update software"],
+    "category": "Package",
+    "risk": "Moderate",
+    "example": "sudo apt upgrade",
+    "beginner_tip": "Jalankan apt update dulu sebelum apt upgrade"
+  },
+  {
+    "id": "pkg-install",
+    "command": "sudo apt install",
+    "description": "Menginstal software baru dari repository (Linux)",
+    "keywords": ["install", "instal", "apt install", "pasang software", "install program"],
+    "category": "Package",
+    "risk": "Moderate",
+    "example": "sudo apt install namapaket",
+    "beginner_tip": "Gunakan apt search untuk mencari nama paket yang tepat"
+  },
+  {
+    "id": "pkg-remove",
+    "command": "sudo apt remove",
+    "description": "Menghapus software yang sudah terinstal (Linux)",
+    "keywords": ["hapus software", "uninstall", "apt remove", "buang program"],
+    "category": "Package",
+    "risk": "Moderate",
+    "example": "sudo apt remove namapaket",
+    "beginner_tip": "Gunakan apt purge untuk menghapus beserta file konfigurasinya"
+  },
+  {
+    "id": "pkg-search",
+    "command": "apt search",
+    "description": "Mencari package yang tersedia di repository (Linux)",
+    "keywords": ["cari software", "apt search", "search package", "temukan program"],
+    "category": "Package",
+    "risk": "Safe",
+    "example": "apt search namapaket",
+    "beginner_tip": "Gunakan grep untuk memfilter hasil: apt search term | grep nama"
+  },
+  {
+    "id": "sys-uname",
+    "command": "uname -a",
+    "description": "Menampilkan informasi kernel Linux yang sedang berjalan",
+    "keywords": ["uname", "versi kernel", "kernel", "sistem operasi", "os version"],
+    "category": "System",
+    "risk": "Safe",
+    "example": "uname -a",
+    "beginner_tip": "uname -r hanya menampilkan nomor versi kernel saja"
+  },
+  {
+    "id": "sys-lsb",
+    "command": "lsb_release -a",
+    "description": "Menampilkan informasi distribusi Linux yang sedang digunakan",
+    "keywords": ["distro", "linux version", "ubuntu version", "versi linux", "os info"],
+    "category": "System",
+    "risk": "Safe",
+    "example": "lsb_release -a",
+    "beginner_tip": "Atau cek /etc/os-release untuk informasi serupa"
+  },
+  {
+    "id": "sys-date",
+    "command": "date",
+    "description": "Menampilkan tanggal dan waktu sistem saat ini",
+    "keywords": ["tanggal", "waktu", "jam", "date", "waktu sekarang"],
+    "category": "System",
+    "risk": "Safe",
+    "example": "date",
+    "beginner_tip": "Gunakan 'date +\"%Y-%m-%d\"' untuk format tanggal saja"
+  },
+  {
+    "id": "sys-who",
+    "command": "who",
+    "description": "Menampilkan siapa saja yang sedang login ke sistem",
+    "keywords": ["who", "siapa login", "user login", "logged in"],
+    "category": "System",
+    "risk": "Safe",
+    "example": "who",
+    "beginner_tip": "whoami menampilkan nama user Anda yang sedang aktif"
+  },
+  {
+    "id": "sys-history",
+    "command": "history",
+    "description": "Menampilkan daftar perintah yang pernah dijalankan sebelumnya di terminal",
+    "keywords": ["history", "riwayat", "perintah sebelumnya", "histori terminal"],
+    "category": "System",
+    "risk": "Safe",
+    "example": "history | tail -20",
+    "beginner_tip": "Tekan panah atas untuk mengulangi perintah terakhir"
+  },
+  {
+    "id": "sys-env",
+    "command": "printenv",
+    "description": "Menampilkan semua variabel lingkungan yang aktif di sesi ini",
+    "keywords": ["env", "environment variable", "variabel lingkungan", "printenv"],
+    "category": "System",
+    "risk": "Safe",
+    "example": "printenv | grep PATH",
+    "beginner_tip": "echo $NAMA_VARIABEL untuk melihat nilai satu variabel saja"
+  },
+  {
+    "id": "cpu-temp",
+    "command": "cat /sys/class/thermal/thermal_zone0/temp",
+    "description": "Membaca suhu CPU dari sensor termal sistem. Hasilnya dalam milicelsius (bagi 1000 untuk Celsius).",
+    "keywords": ["suhu", "panas", "temperatur", "temp", "cpu temp", "thermal"],
+    "category": "Cpu",
+    "risk": "Safe",
+    "example": "cat /sys/class/thermal/thermal_zone0/temp",
+    "beginner_tip": "Suhu normal CPU saat idle: 30-50°C. Di atas 90°C perlu perhatian."
+  },
+  {
+    "id": "text-wc",
+    "command": "wc -l",
+    "description": "Menghitung jumlah baris dalam sebuah file",
+    "keywords": ["hitung baris", "word count", "wc", "jumlah baris", "berapa baris"],
+    "category": "Text",
+    "risk": "Safe",
+    "example": "wc -l namafile.txt",
+    "beginner_tip": "wc -w untuk menghitung kata, wc -c untuk menghitung karakter"
+  },
+  {
+    "id": "text-tail",
+    "command": "tail -f",
+    "description": "Memantau akhir file secara real-time (berguna untuk log)",
+    "keywords": ["tail", "log", "pantau file", "monitor log", "lihat log"],
+    "category": "Text",
+    "risk": "Safe",
+    "example": "tail -f /var/log/syslog",
+    "beginner_tip": "Tekan Ctrl+C untuk berhenti memantau"
+  },
+  {
+    "id": "text-head",
+    "command": "head -n 20",
+    "description": "Menampilkan 20 baris pertama dari sebuah file",
+    "keywords": ["head", "awal file", "baris pertama", "bagian atas file"],
+    "category": "Text",
+    "risk": "Safe",
+    "example": "head -n 20 namafile.txt",
+    "beginner_tip": "Ubah angka 20 sesuai berapa baris yang ingin ditampilkan"
+  },
+  {
+    "id": "hojicha-info",
+    "command": "",
+    "description": "Hojicha adalah asisten terminal Linux bertenaga AI yang ramah untuk pemula, dikembangkan oleh pengembang Tea Linux OS. Hojicha membantu menerjemahkan bahasa sehari-hari ke perintah Linux, memantau sistem, mencari file, mengelola folder, dan menghentikan proses secara aman.",
+    "keywords": ["siapa kamu", "kamu siapa", "apa itu hojicha", "tentang hojicha", "siapa dirimu", "bisa apa", "fitur", "kemampuan"],
+    "category": "System",
+    "risk": "Safe",
+    "example": "",
+    "beginner_tip": ""
+  },
+  {
+    "id": "hojicha-greeting",
+    "command": "",
+    "description": "Menyapa pengguna secara ramah dan natural (seperti 'Halo! Ada yang bisa saya bantu hari ini?').",
+    "keywords": ["halo", "hello", "hai", "hi", "apa kabar"],
+    "category": "System",
+    "risk": "Safe",
+    "example": "",
+    "beginner_tip": ""
+  },
+  {
+    "id": "hojicha-help",
+    "command": "hojicha --help",
+    "description": "Menampilkan petunjuk penggunaan dan opsi bantuan untuk asisten terminal Hojicha",
+    "keywords": ["help", "bantuan", "cara pakai", "cara menggunakan", "panduan"],
+    "category": "System",
+    "risk": "Safe",
+    "example": "hojicha --help",
+    "beginner_tip": "Ketik pertanyaan Anda secara langsung dalam bahasa alami untuk mendapatkan bantuan perintah Linux"
+  },
+  {
+    "id": "cpu-iostat",
+    "command": "iostat",
+    "description": "Menampilkan statistik penggunaan CPU serta statistik input/output untuk perangkat penyimpanan dan partisi (Linux)",
+    "keywords": ["iostat", "io stat", "input output", "statistik disk", "io speed"],
+    "category": "Cpu",
+    "risk": "Safe",
+    "example": "iostat -xz 1",
+    "beginner_tip": "Gunakan flag -xz untuk melihat statistik perpanjangan (extended) secara real-time setiap detik"
+  },
+  {
+    "id": "cpu-mpstat",
+    "command": "mpstat",
+    "description": "Menampilkan statistik penggunaan aktivitas prosesor/CPU secara individual maupun keseluruhan (Linux)",
+    "keywords": ["mpstat", "cpu stats", "multi processor", "penggunaan core"],
+    "category": "Cpu",
+    "risk": "Safe",
+    "example": "mpstat -P ALL 1",
+    "beginner_tip": "-P ALL menampilkan statistik untuk setiap core CPU secara terpisah"
+  },
+  {
+    "id": "sys-sar",
+    "command": "sar",
+    "description": "Mengumpulkan, melaporkan, dan menyimpan informasi aktivitas sistem (CPU, memori, I/O, dll.) (Linux)",
+    "keywords": ["sar", "system activity reporter", "riwayat cpu", "beban server"],
+    "category": "System",
+    "risk": "Safe",
+    "example": "sar -u 1 5",
+    "beginner_tip": "sar sangat berguna untuk menganalisis beban kinerja server di waktu lampau"
+  },
+  {
+    "id": "sys-watch",
+    "command": "watch",
+    "description": "Menjalankan perintah secara berkala dan menampilkan hasilnya secara full screen untuk memantau perubahan secara real-time",
+    "keywords": ["watch", "berkala", "realtime", "pantau terus", "loop"],
+    "category": "System",
+    "risk": "Safe",
+    "example": "watch -n 1 free -h",
+    "beginner_tip": "Gunakan Ctrl+C untuk keluar dari perintah watch"
+  },
+  {
+    "id": "cpu-nproc",
+    "command": "nproc",
+    "description": "Menampilkan jumlah unit pemrosesan (core CPU) yang tersedia untuk sistem",
+    "keywords": ["nproc", "jumlah core", "core count", "berapa core", "cpu core"],
+    "category": "Cpu",
+    "risk": "Safe",
+    "example": "nproc",
+    "beginner_tip": "Sering digunakan di shell script untuk menentukan jumlah thread parallel (misal: make -j$(nproc))"
+  },
+  {
+    "id": "mem-lsmem",
+    "command": "lsmem",
+    "description": "Menampilkan daftar blok memori yang tersedia beserta statusnya (Linux)",
+    "keywords": ["lsmem", "blok memori", "list memory", "info ram"],
+    "category": "Memory",
+    "risk": "Safe",
+    "example": "lsmem",
+    "beginner_tip": "Perintah ini menampilkan jangkauan alamat memori dan status online/offline setiap blok"
+  },
+  {
+    "id": "disk-lsblk",
+    "command": "lsblk",
+    "description": "Menampilkan informasi tentang semua perangkat blok (harddisk, SSD, flashdisk, dll.) yang terhubung ke sistem",
+    "keywords": ["lsblk", "daftar disk", "list block", "partisi", "drive", "device"],
+    "category": "Disk",
+    "risk": "Safe",
+    "example": "lsblk",
+    "beginner_tip": "Gunakan 'lsblk -f' untuk melihat jenis file system (ext4, fat, dll.) serta UUID setiap partisi"
+  },
+  {
+    "id": "disk-fdisk",
+    "command": "sudo fdisk -l",
+    "description": "Menampilkan dan memanipulasi tabel partisi pada disk (Linux)",
+    "keywords": ["fdisk", "partisi disk", "tabel partisi", "partition table"],
+    "category": "Disk",
+    "risk": "Dangerous",
+    "example": "sudo fdisk -l",
+    "beginner_tip": "fdisk adalah utilitas tingkat rendah yang sangat berisiko merusak data jika salah mengubah partisi"
+  },
+  {
+    "id": "disk-mount",
+    "command": "mount",
+    "description": "Memasang (mount) file system agar dapat diakses di lokasi tertentu (mount point) dalam direktori sistem",
+    "keywords": ["mount", "pasang disk", "hubungkan flashdisk", "mount filesystem"],
+    "category": "Disk",
+    "risk": "Moderate",
+    "example": "sudo mount /dev/sdb1 /mnt",
+    "beginner_tip": "Jalankan 'mount' tanpa argumen untuk melihat semua file system yang saat ini terpasang"
+  },
+  {
+    "id": "disk-findmnt",
+    "command": "findmnt",
+    "description": "Menampilkan semua file system yang terpasang dalam bentuk pohon (tree layout) yang mudah dibaca",
+    "keywords": ["findmnt", "list mount", "pohon mount", "mount point"],
+    "category": "Disk",
+    "risk": "Safe",
+    "example": "findmnt",
+    "beginner_tip": "Lebih bersih dan modern dibandingkan menggunakan perintah 'mount' biasa"
+  },
+  {
+    "id": "disk-blkid",
+    "command": "sudo blkid",
+    "description": "Menampilkan atribut (seperti UUID dan tipe file system) dari perangkat blok/partisi yang terdeteksi",
+    "keywords": ["blkid", "uuid disk", "block id", "cek uuid"],
+    "category": "Disk",
+    "risk": "Safe",
+    "example": "sudo blkid",
+    "beginner_tip": "UUID dari blkid sangat berguna ketika mengedit file '/etc/fstab' untuk auto-mount"
+  },
+  {
+    "id": "hw-lspci",
+    "command": "lspci",
+    "description": "Menampilkan daftar semua perangkat PCI (seperti VGA card, ethernet card, dll.) yang terhubung ke motherboard",
+    "keywords": ["lspci", "pci list", "vga card", "motherboard slots"],
+    "category": "Hardware",
+    "risk": "Safe",
+    "example": "lspci",
+    "beginner_tip": "Gunakan 'lspci | grep VGA' untuk mengetahui jenis kartu grafis yang terpasang"
+  },
+  {
+    "id": "hw-lsusb",
+    "command": "lsusb",
+    "description": "Menampilkan daftar semua perangkat USB yang terhubung ke komputer",
+    "keywords": ["lsusb", "perangkat usb", "usb list", "mouse keyboard usb"],
+    "category": "Hardware",
+    "risk": "Safe",
+    "example": "lsusb",
+    "beginner_tip": "Berguna jika flashdisk atau mouse USB Anda tidak terdeteksi oleh sistem"
+  },
+  {
+    "id": "hw-dmidecode",
+    "command": "sudo dmidecode",
+    "description": "Menampilkan informasi hardware sistem (BIOS, tipe motherboard, RAM, dll.) berdasarkan tabel DMI/SMBIOS",
+    "keywords": ["dmidecode", "bios info", "motherboard info", "tipe ram"],
+    "category": "Hardware",
+    "risk": "Safe",
+    "example": "sudo dmidecode -t memory",
+    "beginner_tip": "Gunakan flag '-t memory' untuk melihat kapasitas RAM maksimal yang didukung motherboard Anda"
+  },
+  {
+    "id": "hw-lshw",
+    "command": "sudo lshw",
+    "description": "Menghasilkan laporan konfigurasi hardware sistem yang sangat detail dan lengkap",
+    "keywords": ["lshw", "list hardware", "spesifikasi pc", "spek pc"],
+    "category": "Hardware",
+    "risk": "Safe",
+    "example": "sudo lshw -short",
+    "beginner_tip": "Gunakan flag '-short' agar tampilan laporan lebih ringkas dan mudah dibaca"
+  },
+  {
+    "id": "sys-hostnamectl",
+    "command": "hostnamectl",
+    "description": "Melihat atau mengubah hostname sistem serta informasi terkait (OS, kernel, arsitektur)",
+    "keywords": ["hostnamectl", "ganti hostname", "ganti nama pc", "nama komputer"],
+    "category": "System",
+    "risk": "Safe",
+    "example": "hostnamectl",
+    "beginner_tip": "Gunakan 'sudo hostnamectl set-hostname namabaru' untuk mengganti nama komputer Anda"
+  },
+  {
+    "id": "net-curl",
+    "command": "curl",
+    "description": "Mentransfer data dari atau ke server menggunakan berbagai protokol (HTTP, HTTPS, FTP, dll.)",
+    "keywords": ["curl", "download curl", "api request", "get url"],
+    "category": "Network",
+    "risk": "Safe",
+    "example": "curl https://icanhazip.com",
+    "beginner_tip": "Gunakan flag -O untuk mengunduh file dengan nama aslinya, atau -o untuk memberi nama baru"
+  },
+  {
+    "id": "net-iproute",
+    "command": "ip route",
+    "description": "Menampilkan dan mengelola tabel routing IP di sistem",
+    "keywords": ["ip route", "routing", "gateway", "ip r"],
+    "category": "Network",
+    "risk": "Safe",
+    "example": "ip route show",
+    "beginner_tip": "'default via ...' menunjukkan alamat IP router/gateway utama Anda"
+  },
+  {
+    "id": "net-netstat",
+    "command": "netstat -tuln",
+    "description": "Menampilkan koneksi jaringan, tabel routing, statistik interface, dan port terbuka",
+    "keywords": ["netstat", "koneksi jaringan", "port terbuka", "network status"],
+    "category": "Network",
+    "risk": "Safe",
+    "example": "netstat -tuln",
+    "beginner_tip": "Pada sistem modern, perintah 'ss' direkomendasikan sebagai pengganti netstat"
+  },
+  {
+    "id": "net-dig",
+    "command": "dig",
+    "description": "Melakukan query informasi DNS (Domain Name System) secara detail untuk sebuah domain",
+    "keywords": ["dig", "dns lookup", "cek dns", "domain info", "ip domain"],
+    "category": "Network",
+    "risk": "Safe",
+    "example": "dig google.com",
+    "beginner_tip": "dig mengembalikan catatan DNS seperti A record, MX record, TXT record, dll."
+  },
+  {
+    "id": "net-nslookup",
+    "command": "nslookup",
+    "description": "Mencari alamat IP dari sebuah nama domain atau sebaliknya (reverse DNS lookup)",
+    "keywords": ["nslookup", "cek ip domain", "resolv domain", "dns query"],
+    "category": "Network",
+    "risk": "Safe",
+    "example": "nslookup google.com",
+    "beginner_tip": "Sangat praktis untuk mengecek apakah DNS server Anda merespons dengan benar"
+  },
+  {
+    "id": "net-traceroute",
+    "command": "traceroute",
+    "description": "Melacak jalur/rute lompatan (hop) yang dilewati paket data untuk mencapai server tujuan",
+    "keywords": ["traceroute", "lacak rute", "hop count", "rute paket"],
+    "category": "Network",
+    "risk": "Safe",
+    "example": "traceroute google.com",
+    "beginner_tip": "Membantu menganalisis di titik mana koneksi internet Anda mengalami hambatan atau lambat"
+  },
+  {
+    "id": "net-mtr",
+    "command": "mtr",
+    "description": "Tool diagnosis jaringan yang menggabungkan fungsi 'ping' dan 'traceroute' secara real-time",
+    "keywords": ["mtr", "my traceroute", "monitoring network", "ping real time"],
+    "category": "Network",
+    "risk": "Safe",
+    "example": "mtr google.com",
+    "beginner_tip": "Menampilkan persentase paket loss pada setiap hop secara langsung"
+  },
+  {
+    "id": "net-arp",
+    "command": "arp -a",
+    "description": "Menampilkan tabel cache ARP (Address Resolution Protocol) yang berisi pemetaan alamat IP ke MAC address perangkat lain di jaringan lokal",
+    "keywords": ["arp", "mac address", "ip mac", "arp cache"],
+    "category": "Network",
+    "risk": "Safe",
+    "example": "arp -a",
+    "beginner_tip": "Gunakan untuk menemukan alamat MAC fisik dari router atau perangkat lain di jaringan yang sama"
+  },
+  {
+    "id": "proc-pgrep",
+    "command": "pgrep",
+    "description": "Mencari ID Proses (PID) dari aplikasi yang sedang berjalan berdasarkan namanya",
+    "keywords": ["pgrep", "cari pid", "id proses", "find pid"],
+    "category": "Process",
+    "risk": "Safe",
+    "example": "pgrep firefox",
+    "beginner_tip": "Lebih praktis daripada mengetik 'ps aux | grep namaapp'"
+  },
+  {
+    "id": "proc-killall",
+    "command": "killall",
+    "description": "Menghentikan semua proses berdasarkan nama aplikasinya secara sekaligus",
+    "keywords": ["killall", "hentikan semua proses", "matikan aplikasi", "kill nama"],
+    "category": "Process",
+    "risk": "Moderate",
+    "example": "killall chrome",
+    "beginner_tip": "Akan menutup semua tab/proses yang bernama 'chrome'"
+  },
+  {
+    "id": "proc-nohup",
+    "command": "nohup",
+    "description": "Menjalankan perintah agar tetap berjalan di latar belakang (background) meskipun terminal ditutup",
+    "keywords": ["nohup", "no hangup", "background process", "background task"],
+    "category": "Process",
+    "risk": "Safe",
+    "example": "nohup ./script.sh &",
+    "beginner_tip": "Gunakan tanda '&' di akhir perintah agar terminal langsung bisa digunakan kembali"
+  },
+  {
+    "id": "proc-jobs",
+    "command": "jobs",
+    "description": "Menampilkan daftar tugas (jobs) yang sedang berjalan atau dihentikan sementara di sesi terminal saat ini",
+    "keywords": ["jobs", "tugas background", "proses terminal", "job list"],
+    "category": "Process",
+    "risk": "Safe",
+    "example": "jobs",
+    "beginner_tip": "Setiap tugas memiliki nomor indeks (seperti [1]) yang bisa dipakai untuk memindahkannya ke foreground/background"
+  },
+  {
+    "id": "proc-bg",
+    "command": "bg",
+    "description": "Melanjutkan tugas yang dihentikan sementara (suspended) agar berjalan di latar belakang (background)",
+    "keywords": ["bg", "background", "pindah belakang", "lanjutkan proses"],
+    "category": "Process",
+    "risk": "Safe",
+    "example": "bg %1",
+    "beginner_tip": "Ganti '%1' dengan nomor tugas yang Anda dapatkan dari perintah 'jobs'"
+  },
+  {
+    "id": "proc-fg",
+    "command": "fg",
+    "description": "Memindahkan tugas yang berjalan di latar belakang ke latar depan (foreground) sesi terminal saat ini",
+    "keywords": ["fg", "foreground", "pindah depan", "tampilkan proses"],
+    "category": "Process",
+    "risk": "Safe",
+    "example": "fg %1",
+    "beginner_tip": "Setelah dipindahkan ke foreground, Anda bisa berinteraksi langsung atau menghentikannya dengan Ctrl+C"
+  },
+  {
+    "id": "proc-nice",
+    "command": "nice",
+    "description": "Menjalankan perintah dengan prioritas penjadwalan CPU (niceness) tertentu",
+    "keywords": ["nice", "prioritas cpu", "proses prioritas", "priority"],
+    "category": "Process",
+    "risk": "Safe",
+    "example": "nice -n 10 tar -czf backup.tar.gz /data",
+    "beginner_tip": "Nilai nice berkisar -20 (prioritas tertinggi) hingga 19 (prioritas terendah). Defaultnya adalah 0."
+  },
+  {
+    "id": "proc-renice",
+    "command": "renice",
+    "description": "Mengubah prioritas penjadwalan CPU (niceness) dari proses yang sudah berjalan",
+    "keywords": ["renice", "ubah prioritas cpu", "ubah priority"],
+    "category": "Process",
+    "risk": "Moderate",
+    "example": "renice +10 -p 1234",
+    "beginner_tip": "Hanya user root (sudo) yang bisa menaikkan prioritas proses (memberikan nilai nice negatif)"
+  },
+  {
+    "id": "file-touch",
+    "command": "touch",
+    "description": "Membuat file kosong baru atau memperbarui timestamp file yang sudah ada",
+    "keywords": ["touch", "buat file", "bikin file kosong", "new file"],
+    "category": "Files",
+    "risk": "Safe",
+    "example": "touch catatan.txt",
+    "beginner_tip": "Sangat praktis untuk membuat file kosong sebelum diisi teks menggunakan editor"
+  },
+  {
+    "id": "file-rmdir",
+    "command": "rmdir",
+    "description": "Menghapus folder kosong dari sistem",
+    "keywords": ["rmdir", "hapus folder kosong", "hapus direktori"],
+    "category": "Files",
+    "risk": "Safe",
+    "example": "rmdir folder_kosong",
+    "beginner_tip": "Perintah ini akan error jika folder tersebut memiliki isi (file/subfolder)"
+  },
+  {
+    "id": "file-tree",
+    "command": "tree",
+    "description": "Menampilkan struktur file dan direktori secara hierarkis seperti pohon",
+    "keywords": ["tree", "pohon direktori", "struktur folder", "list tree"],
+    "category": "Files",
+    "risk": "Safe",
+    "example": "tree",
+    "beginner_tip": "Gunakan 'tree -L 2' untuk membatasi tampilan hingga 2 level folder ke bawah"
+  },
+  {
+    "id": "file-stat",
+    "command": "stat",
+    "description": "Menampilkan informasi detail tentang file atau sistem file (ukuran, permission, waktu akses, dll.)",
+    "keywords": ["stat", "status file", "informasi detail file", "detail file"],
+    "category": "Files",
+    "risk": "Safe",
+    "example": "stat namafile.txt",
+    "beginner_tip": "Menampilkan waktu modifikasi (Modify), akses (Access), dan perubahan status (Change)"
+  },
+  {
+    "id": "file-realpath",
+    "command": "realpath",
+    "description": "Menampilkan path absolut/lengkap dari suatu file dengan menerjemahkan symbolic link",
+    "keywords": ["realpath", "path lengkap", "absolute path", "lokasi asli"],
+    "category": "Files",
+    "risk": "Safe",
+    "example": "file.txt",
+    "beginner_tip": "Sangat berguna dalam scripting saat Anda ingin memastikan lokasi file sebenarnya"
+  },
+  {
+    "id": "file-basename",
+    "command": "basename",
+    "description": "Mengambil nama file saja dari sebuah path lengkap (menghilangkan direktori induk)",
+    "keywords": ["basename", "nama file saja", "nama file dari path"],
+    "category": "Files",
+    "risk": "Safe",
+    "example": "basename /usr/bin/grep",
+    "beginner_tip": "Hasil dari perintah di atas adalah 'grep'"
+  },
+  {
+    "id": "file-dirname",
+    "command": "dirname",
+    "description": "Mengambil path direktori saja dari sebuah path lengkap (menghilangkan nama file)",
+    "keywords": ["dirname", "folder saja", "path direktori"],
+    "category": "Files",
+    "risk": "Safe",
+    "example": "dirname /usr/bin/grep",
+    "beginner_tip": "Hasil dari perintah di atas adalah '/usr/bin'"
+  },
+  {
+    "id": "file-ln",
+    "command": "ln -s",
+    "description": "Membuat tautan (link) antar file, biasanya tautan simbolis (symbolic link) seperti shortcut",
+    "keywords": ["ln", "symlink", "shortcut", "tautan file", "soft link"],
+    "category": "Files",
+    "risk": "Safe",
+    "example": "ln -s file_asli.txt shortcut.txt",
+    "beginner_tip": "Selalu gunakan flag '-s' untuk membuat soft link/shortcut yang bisa menunjuk ke file atau folder lain"
+  },
+  {
+    "id": "file-locate",
+    "command": "locate",
+    "description": "Mencari lokasi file dengan sangat cepat menggunakan database sistem",
+    "keywords": ["locate", "cari cepat", "find fast", "temukan lokasi file"],
+    "category": "Files",
+    "risk": "Safe",
+    "example": "locate namafile.txt",
+    "beginner_tip": "Gunakan 'sudo updatedb' terlebih dahulu agar database locate terupdate dengan file-file terbaru"
+  },
+  {
+    "id": "sys-which",
+    "command": "which",
+    "description": "Menampilkan path lengkap dari file binary/executable dari perintah yang diketik",
+    "keywords": ["which", "lokasi binary", "di mana perintah", "command path"],
+    "category": "System",
+    "risk": "Safe",
+    "example": "which ls",
+    "beginner_tip": "Perintah di atas akan mengembalikan '/usr/bin/ls' jika itu lokasi binary ls"
+  },
+  {
+    "id": "sys-whereis",
+    "command": "whereis",
+    "description": "Mencari lokasi binary, file source code, dan manual page dari sebuah perintah",
+    "keywords": ["whereis", "lokasi manual", "lokasi source", "lokasi perintah"],
+    "category": "System",
+    "risk": "Safe",
+    "example": "whereis python",
+    "beginner_tip": "Tampilannya mencakup semua path terkait program tersebut di sistem"
+  },
+  {
+    "id": "text-awk",
+    "command": "awk",
+    "description": "Bahasa pemrograman berbasis teks untuk memproses data kolom dan menghasilkan laporan",
+    "keywords": ["awk", "proses kolom", "olah teks", "filter kolom"],
+    "category": "Text",
+    "risk": "Safe",
+    "example": "awk '{print $1}' file.txt",
+    "beginner_tip": "Perintah di atas akan membaca file.txt dan mencetak hanya kolom pertama dari setiap baris"
+  },
+  {
+    "id": "text-sed",
+    "command": "sed",
+    "description": "Stream editor untuk menyaring dan memanipulasi teks secara otomatis (misal: cari dan ganti kata)",
+    "keywords": ["sed", "stream editor", "ganti kata", "replace text"],
+    "category": "Text",
+    "risk": "Safe",
+    "example": "sed 's/lama/baru/g' file.txt",
+    "beginner_tip": "Perintah di atas akan mengganti semua kata 'lama' menjadi 'baru' dalam file.txt"
+  },
+  {
+    "id": "text-sort",
+    "command": "sort",
+    "description": "Mengurutkan baris teks di dalam file secara alfabetis atau numerik",
+    "keywords": ["sort", "urutkan", "sorting teks", "urut abjad"],
+    "category": "Text",
+    "risk": "Safe",
+    "example": "sort file.txt",
+    "beginner_tip": "Gunakan 'sort -n' untuk mengurutkan angka, atau 'sort -r' untuk mengurutkan secara terbalik (descending)"
+  },
+  {
+    "id": "text-uniq",
+    "command": "uniq",
+    "description": "Menghilangkan atau menyaring baris duplikat yang berurutan di dalam teks",
+    "keywords": ["uniq", "baris unik", "hapus duplikat", "unique text"],
+    "category": "Text",
+    "risk": "Safe",
+    "example": "sort file.txt | uniq",
+    "beginner_tip": "uniq memerlukan input yang sudah berurutan untuk mendeteksi duplikasi secara akurat"
+  },
+  {
+    "id": "text-cut",
+    "command": "cut",
+    "description": "Memotong bagian tertentu dari setiap baris teks (berdasarkan kolom atau karakter)",
+    "keywords": ["cut", "potong teks", "ambil kolom", "potong kata"],
+    "category": "Text",
+    "risk": "Safe",
+    "example": "cut -d',' -f1 file.csv",
+    "beginner_tip": "-d menentukan separator (delimeter) dan -f menentukan kolom ke berapa yang ingin diambil"
+  },
+  {
+    "id": "text-tr",
+    "command": "tr",
+    "description": "Menerjemahkan (translate) atau menghapus karakter tertentu dari input teks",
+    "keywords": ["tr", "translate", "ubah huruf", "ganti karakter"],
+    "category": "Text",
+    "risk": "Safe",
+    "example": "echo \"hello\" | tr 'a-z' 'A-Z'",
+    "beginner_tip": "Perintah di atas menerjemahkan semua huruf kecil menjadi huruf besar (menghasilkan 'HELLO')"
+  },
+  {
+    "id": "text-paste",
+    "command": "paste",
+    "description": "Menggabungkan baris-baris dari beberapa file secara berdampingan (horizontal)",
+    "keywords": ["paste", "gabung file", "gabung baris", "horizontal merge"],
+    "category": "Text",
+    "risk": "Safe",
+    "example": "paste file1.txt file2.txt",
+    "beginner_tip": "Berguna saat Anda ingin menjajarkan kolom dari dua file teks berbeda"
+  },
+  {
+    "id": "text-tee",
+    "command": "tee",
+    "description": "Membaca dari input dan menulisnya sekaligus ke output terminal dan ke satu atau beberapa file",
+    "keywords": ["tee", "tulis file terminal", "pipe output", "simpan output"],
+    "category": "Text",
+    "risk": "Safe",
+    "example": "ls | tee daftar.txt",
+    "beginner_tip": "Sangat berguna saat Anda ingin melihat hasil perintah di layar dan menyimpannya ke file log"
+  },
+  {
+    "id": "text-column",
+    "command": "column -t",
+    "description": "Memformat input teks menjadi tabel yang rapi dan sejajar",
+    "keywords": ["column", "format tabel", "tabel teks", "perapian teks"],
+    "category": "Text",
+    "risk": "Safe",
+    "example": "column -t file.txt",
+    "beginner_tip": "Membuat kolom teks yang dipisahkan spasi menjadi sejajar vertikal"
+  },
+  {
+    "id": "perm-umask",
+    "command": "umask",
+    "description": "Menampilkan atau menetapkan izin default untuk file dan folder yang baru dibuat",
+    "keywords": ["umask", "default permission", "hak akses default"],
+    "category": "Permissions",
+    "risk": "Moderate",
+    "example": "umask 022",
+    "beginner_tip": "Nilai umask dikurangkan dari izin maksimal (777 untuk folder, 666 untuk file) untuk menentukan izin default"
+  },
+  {
+    "id": "sys-whoami",
+    "command": "whoami",
+    "description": "Menampilkan nama user yang aktif saat ini di sesi terminal",
+    "keywords": ["whoami", "user saya", "nama saya", "siapa saya"],
+    "category": "System",
+    "risk": "Safe",
+    "example": "whoami",
+    "beginner_tip": "Sangat berguna ketika Anda berganti identitas user (su) dan ingin memastikan user aktif Anda"
+  },
+  {
+    "id": "sys-id",
+    "command": "id",
+    "description": "Menampilkan ID Pengguna (UID) dan ID Grup (GID) dari user yang sedang aktif",
+    "keywords": ["id", "uid", "gid", "user id", "group id"],
+    "category": "System",
+    "risk": "Safe",
+    "example": "id",
+    "beginner_tip": "User root selalu memiliki UID bernilai 0"
+  },
+  {
+    "id": "sys-groups",
+    "command": "groups",
+    "description": "Menampilkan semua grup tempat user aktif saat ini terdaftar",
+    "keywords": ["groups", "grup saya", "daftar grup", "member grup"],
+    "category": "System",
+    "risk": "Safe",
+    "example": "groups",
+    "beginner_tip": "Grup menentukan izin akses kolektif terhadap file atau fitur sistem"
+  },
+  {
+    "id": "sys-passwd",
+    "command": "passwd",
+    "description": "Mengubah password user yang sedang aktif atau user lain",
+    "keywords": ["passwd", "ganti password", "ganti sandi", "password"],
+    "category": "System",
+    "risk": "Moderate",
+    "example": "passwd",
+    "beginner_tip": "Ketik 'passwd' untuk mengganti sandi Anda sendiri, atau 'sudo passwd username' untuk mengganti sandi user lain"
+  },
+  {
+    "id": "sys-useradd",
+    "command": "sudo useradd",
+    "description": "Membuat akun user baru di sistem (Linux)",
+    "keywords": ["useradd", "tambah user", "buat akun", "new user"],
+    "category": "System",
+    "risk": "Moderate",
+    "example": "sudo useradd -m username",
+    "beginner_tip": "Gunakan flag -m agar direktori home untuk user tersebut otomatis dibuat"
+  },
+  {
+    "id": "sys-userdel",
+    "command": "sudo userdel",
+    "description": "Menghapus akun user dari sistem",
+    "keywords": ["userdel", "hapus user", "buang user", "delete user"],
+    "category": "System",
+    "risk": "Moderate",
+    "example": "sudo userdel -r username",
+    "beginner_tip": "Gunakan flag -r untuk menghapus direktori home beserta file-file milik user tersebut"
+  },
+  {
+    "id": "sys-su",
+    "command": "su",
+    "description": "Mengganti identitas sesi terminal menjadi user lain atau superuser (root)",
+    "keywords": ["su", "substitute user", "login root", "ganti user"],
+    "category": "System",
+    "risk": "Moderate",
+    "example": "su - username",
+    "beginner_tip": "'su -' tanpa nama user akan mencoba masuk sebagai root"
+  },
+  {
+    "id": "sys-hostname",
+    "command": "hostname",
+    "description": "Menampilkan nama host (komputer) yang digunakan saat ini",
+    "keywords": ["hostname", "nama host", "nama komputer"],
+    "category": "System",
+    "risk": "Safe",
+    "example": "hostname",
+    "beginner_tip": "Menampilkan nama yang teridentifikasi di jaringan lokal"
+  },
+  {
+    "id": "sys-timedatectl",
+    "command": "timedatectl",
+    "description": "Memeriksa dan mengatur waktu, tanggal, dan zona waktu sistem",
+    "keywords": ["timedatectl", "ganti zona waktu", "cek jam pc", "timezone"],
+    "category": "System",
+    "risk": "Moderate",
+    "example": "timedatectl",
+    "beginner_tip": "Gunakan 'timedatectl list-timezones' untuk melihat daftar zona waktu yang didukung"
+  },
+  {
+    "id": "sys-systemctl",
+    "command": "systemctl",
+    "description": "Mengontrol dan mengelola layanan (services) sistemd di sistem (Linux)",
+    "keywords": ["systemctl", "restart service", "start service", "layanan sistem", "sistemd"],
+    "category": "System",
+    "risk": "Moderate",
+    "example": "systemctl status nginx",
+    "beginner_tip": "Digunakan untuk memulai (start), mematikan (stop), mengaktifkan (enable), atau mengecek status suatu aplikasi server"
+  },
+  {
+    "id": "sys-journalctl",
+    "command": "journalctl",
+    "description": "Menampilkan log sistem yang dikumpulkan oleh journald (sistemd)",
+    "keywords": ["journalctl", "baca log", "log service", "system log"],
+    "category": "System",
+    "risk": "Safe",
+    "example": "journalctl -u nginx",
+    "beginner_tip": "Gunakan flag -u untuk memantau log spesifik dari satu service"
+  },
+  {
+    "id": "sys-dmesg",
+    "command": "dmesg",
+    "description": "Menampilkan log pesan ring kernel (biasanya terkait hardware, driver, dan koneksi device baru)",
+    "keywords": ["dmesg", "log kernel", "dmesg logs", "pesan booting"],
+    "category": "System",
+    "risk": "Safe",
+    "example": "dmesg -T | tail -20",
+    "beginner_tip": "Gunakan flag -T agar format waktu di dalam log dikonversi ke waktu lokal yang mudah dibaca"
+  },
+  {
+    "id": "docker-ps",
+    "command": "docker ps",
+    "description": "Menampilkan daftar container Docker yang sedang berjalan aktif saat ini",
+    "keywords": ["docker ps", "container jalan", "cek container", "running container", "list container"],
+    "category": "Docker",
+    "risk": "Safe",
+    "example": "docker ps",
+    "beginner_tip": "Gunakan command ini untuk mengetahui container apa saja yang sedang aktif beserta port-nya"
+  },
+  {
+    "id": "docker-ps-all",
+    "command": "docker ps -a",
+    "description": "Menampilkan semua container Docker di sistem, baik yang sedang aktif maupun yang sudah mati/berhenti",
+    "keywords": ["docker ps -a", "semua container", "container mati", "all containers"],
+    "category": "Docker",
+    "risk": "Safe",
+    "example": "docker ps -a",
+    "beginner_tip": "Sangat berguna untuk mencari container lama yang mati atau keluar dengan error status"
+  },
+  {
+    "id": "docker-images",
+    "command": "docker images",
+    "description": "Menampilkan daftar semua Docker image lokal yang tersimpan di komputer Anda",
+    "keywords": ["docker images", "list image", "lihat image", "docker image ls"],
+    "category": "Docker",
+    "risk": "Safe",
+    "example": "docker images",
+    "beginner_tip": "Menunjukkan nama repository, tag versi, ID image, dan ukuran file image tersebut"
+  },
+  {
+    "id": "docker-pull",
+    "command": "docker pull",
+    "description": "Mengunduh (download) Docker image dari registry online seperti Docker Hub ke komputer lokal",
+    "keywords": ["docker pull", "download image", "unduh image", "pull image"],
+    "category": "Docker",
+    "risk": "Safe",
+    "example": "docker pull ubuntu:latest",
+    "beginner_tip": "Secara default akan mengunduh versi dengan tag 'latest' jika Anda tidak menentukan tag-nya"
+  },
+  {
+    "id": "docker-build",
+    "command": "docker build",
+    "description": "Membuat (build) Docker image baru berdasarkan instruksi yang ada di dalam berkas Dockerfile",
+    "keywords": ["docker build", "bikin image", "build image", "dockerfile build"],
+    "category": "Docker",
+    "risk": "Safe",
+    "example": "docker build -t namaservice:1.0 .",
+    "beginner_tip": "Tanda titik (.) di akhir perintah menunjukkan lokasi folder saat ini yang berisi berkas Dockerfile"
+  },
+  {
+    "id": "docker-run",
+    "command": "docker run",
+    "description": "Membuat dan menjalankan container baru dari suatu Docker image tertentu",
+    "keywords": ["docker run", "jalankan container", "start new container", "run image"],
+    "category": "Docker",
+    "risk": "Moderate",
+    "example": "docker run -d -p 8080:80 --name webserver nginx",
+    "beginner_tip": "-d untuk berjalan di background, -p untuk memetakan port (host:container), dan --name untuk memberi nama container"
+  },
+  {
+    "id": "docker-stop",
+    "command": "docker stop",
+    "description": "Menghentikan container yang sedang berjalan secara aman (memberikan sinyal SIGTERM)",
+    "keywords": ["docker stop", "matikan container", "hentikan container", "stop container"],
+    "category": "Docker",
+    "risk": "Safe",
+    "example": "docker stop nama_container",
+    "beginner_tip": "Gunakan nama container atau ID container untuk menghentikannya"
+  },
+  {
+    "id": "docker-restart",
+    "command": "docker restart",
+    "description": "Menghentikan kemudian menjalankan kembali (restart) sebuah container",
+    "keywords": ["docker restart", "restart container", "mulai ulang container"],
+    "category": "Docker",
+    "risk": "Safe",
+    "example": "docker restart nama_container",
+    "beginner_tip": "Sangat praktis untuk menerapkan konfigurasi baru tanpa harus menghapus container terlebih dahulu"
+  },
+  {
+    "id": "docker-rm",
+    "command": "docker rm",
+    "description": "Menghapus satu atau beberapa container yang sudah tidak aktif (stopped)",
+    "keywords": ["docker rm", "hapus container", "buang container", "delete container"],
+    "category": "Docker",
+    "risk": "Moderate",
+    "example": "docker rm nama_container",
+    "beginner_tip": "Container harus dihentikan (docker stop) terlebih dahulu sebelum bisa dihapus, kecuali menggunakan flag -f (force)"
+  },
+  {
+    "id": "docker-rmi",
+    "command": "docker rmi",
+    "description": "Menghapus satu atau beberapa Docker image dari komputer lokal Anda",
+    "keywords": ["docker rmi", "hapus image", "buang image", "delete image"],
+    "category": "Docker",
+    "risk": "Moderate",
+    "example": "docker rmi image_id",
+    "beginner_tip": "Image tidak dapat dihapus jika masih digunakan oleh container aktif atau non-aktif"
+  },
+  {
+    "id": "docker-logs",
+    "command": "docker logs",
+    "description": "Melihat log atau output terminal dari suatu container tertentu",
+    "keywords": ["docker logs", "log container", "lihat output container", "logs"],
+    "category": "Docker",
+    "risk": "Safe",
+    "example": "docker logs -f nama_container",
+    "beginner_tip": "Gunakan flag '-f' (follow) untuk memantau log secara real-time saat log baru masuk"
+  },
+  {
+    "id": "docker-exec",
+    "command": "docker exec -it",
+    "description": "Menjalankan perintah baru secara interaktif di dalam container yang sedang aktif",
+    "keywords": ["docker exec", "masuk container", "shell container", "exec", "exec -it"],
+    "category": "Docker",
+    "risk": "Safe",
+    "example": "docker exec -it nama_container bash",
+    "beginner_tip": "Gunakan 'bash' atau 'sh' untuk masuk ke dalam terminal/shell shell interaktif container tersebut"
+  },
+  {
+    "id": "docker-stats",
+    "command": "docker stats",
+    "description": "Menampilkan statistik penggunaan resource (CPU, Memori, I/O jaringan) dari semua container aktif secara real-time",
+    "keywords": ["docker stats", "ram container", "cpu container", "resource monitor"],
+    "category": "Docker",
+    "risk": "Safe",
+    "example": "docker stats",
+    "beginner_tip": "Tekan Ctrl+C untuk keluar dari monitoring statistik ini"
+  },
+  {
+    "id": "docker-inspect",
+    "command": "docker inspect",
+    "description": "Menampilkan informasi detail tingkat rendah (low-level) dari objek Docker (container, image, volume, dll.) dalam format JSON",
+    "keywords": ["docker inspect", "detail container", "ip container", "inspect"],
+    "category": "Docker",
+    "risk": "Safe",
+    "example": "docker inspect nama_container",
+    "beginner_tip": "Sangat berguna untuk mencari tahu alamat IP lokal container atau volume binding"
+  },
+  {
+    "id": "docker-network-ls",
+    "command": "docker network ls",
+    "description": "Menampilkan daftar semua jaringan (network) Docker yang terdaftar di sistem",
+    "keywords": ["docker network ls", "list network", "jaringan docker"],
+    "category": "Docker",
+    "risk": "Safe",
+    "example": "docker network ls",
+    "beginner_tip": "Docker memiliki network bawaan seperti bridge, host, dan none"
+  },
+  {
+    "id": "docker-volume-ls",
+    "command": "docker volume ls",
+    "description": "Menampilkan daftar semua volume penyimpanan lokal yang dikelola oleh Docker",
+    "keywords": ["docker volume ls", "list volume", "volume docker", "penyimpanan container"],
+    "category": "Docker",
+    "risk": "Safe",
+    "example": "docker volume ls",
+    "beginner_tip": "Volume digunakan untuk menyimpan data container secara persisten agar tidak hilang saat container dihapus"
+  },
+  {
+    "id": "docker-compose-up",
+    "command": "docker compose up",
+    "description": "Membuat, mengunduh, dan menjalankan semua service yang didefinisikan dalam file docker-compose.yml",
+    "keywords": ["docker compose up", "compose up", "jalankan compose", "docker-compose up"],
+    "category": "Docker",
+    "risk": "Safe",
+    "example": "docker compose up -d",
+    "beginner_tip": "Gunakan flag '-d' agar seluruh service berjalan di latar belakang (detached mode)"
+  },
+  {
+    "id": "docker-compose-down",
+    "command": "docker compose down",
+    "description": "Menghentikan dan menghapus seluruh container, network, dan image yang dibuat oleh perintah 'up'",
+    "keywords": ["docker compose down", "compose down", "matikan compose", "docker-compose down"],
+    "category": "Docker",
+    "risk": "Moderate",
+    "example": "docker compose down",
+    "beginner_tip": "Menambahkan flag '-v' juga akan menghapus volume bernama (named volumes) yang terdefinisi di docker-compose.yml"
+  },
+  {
+    "id": "docker-compose-logs",
+    "command": "docker compose logs",
+    "description": "Menampilkan output log gabungan dari seluruh service yang dikelola oleh Docker Compose",
+    "keywords": ["docker compose logs", "compose logs", "log compose"],
+    "category": "Docker",
+    "risk": "Safe",
+    "example": "docker compose logs -f",
+    "beginner_tip": "Gunakan flag '-f' untuk memantau log secara real-time dari semua service sekaligus"
+  },
+  {
+    "id": "docker-compose-exec",
+    "command": "docker compose exec",
+    "description": "Menjalankan perintah interaktif di dalam container service Docker Compose yang sedang aktif",
+    "keywords": ["docker compose exec", "compose exec", "masuk compose container"],
+    "category": "Docker",
+    "risk": "Safe",
+    "example": "docker compose exec app bash",
+    "beginner_tip": "Ganti 'app' dengan nama service yang tertera di file docker-compose.yml Anda"
+  },
+  {
+    "id": "docker-system-prune",
+    "command": "docker system prune",
+    "description": "Membersihkan space disk dengan menghapus semua resource Docker yang tidak terpakai (stopped container, unused network, dangling image & cache)",
+    "keywords": ["docker system prune", "clean docker", "bersihkan docker", "prune"],
+    "category": "Docker",
+    "risk": "Dangerous",
+    "example": "docker system prune -a --volumes",
+    "beginner_tip": "HATI-HATI: Perintah ini menghapus data secara permanen. Tambahkan flag '-a' untuk menghapus semua image yang tidak digunakan container aktif, dan '--volumes' untuk menghapus volume tidak terpakai"
+  },
+  {
+    "id": "docker-start",
+    "command": "sudo systemctl start docker",
+    "description": "Memulai layanan Docker menggunakan systemd (Linux)",
+    "keywords": ["jalankan docker", "nyalakan docker", "start docker", "run docker", "hidupkan docker"],
+    "category": "Docker",
+    "risk": "Moderate",
+    "example": "sudo systemctl start docker",
+    "beginner_tip": "Memerlukan hak akses sudo karena memodifikasi layanan tingkat sistem"
+  },
+  {
+    "id": "docker-stop",
+    "command": "sudo systemctl stop docker",
+    "description": "Menghentikan layanan Docker menggunakan systemd (Linux)",
+    "keywords": ["matikan docker", "hentikan docker", "stop docker", "quit docker", "close docker"],
+    "category": "Docker",
+    "risk": "Moderate",
+    "example": "sudo systemctl stop docker",
+    "beginner_tip": "Memerlukan hak akses sudo karena menghentikan layanan tingkat sistem"
+  },
+  {
+    "id": "git-status",
+    "command": "git status",
+    "description": "Menampilkan status working directory dan staging area (apakah ada file yang diubah, dihapus, atau belum di-track)",
+    "keywords": ["git status", "status git", "status file git", "cek status git", "status repository"],
+    "category": "Git",
+    "risk": "Safe",
+    "example": "git status",
+    "beginner_tip": "Gunakan command ini sesering mungkin untuk mengetahui keadaan repository Anda saat ini."
+  },
+  {
+    "id": "git-diff",
+    "command": "git diff",
+    "description": "Menampilkan perbedaan/perubahan file yang belum di-stage (belum di-git add)",
+    "keywords": ["git diff", "perbedaan git", "cek perubahan git", "diff git"],
+    "category": "Git",
+    "risk": "Safe",
+    "example": "git diff",
+    "beginner_tip": "Perintah ini membantu Anda meninjau kembali apa saja yang telah Anda ubah sebelum melakukan add."
+  },
+  {
+    "id": "git-diff-staged",
+    "command": "git diff --staged",
+    "description": "Menampilkan perbedaan/perubahan file yang sudah di-stage (sudah di-git add tapi belum di-commit)",
+    "keywords": ["git diff staged", "diff staged", "perubahan staged", "cek staged diff"],
+    "category": "Git",
+    "risk": "Safe",
+    "example": "git diff --staged",
+    "beginner_tip": "Sangat berguna untuk memastikan kembali kode yang siap untuk di-commit."
+  },
+  {
+    "id": "git-show",
+    "command": "git show",
+    "description": "Menampilkan informasi detail dan perubahan (diff) dari objek git seperti commit tertentu",
+    "keywords": ["git show", "detail commit", "lihat commit", "show commit"],
+    "category": "Git",
+    "risk": "Safe",
+    "example": "git show HEAD",
+    "beginner_tip": "Secara default, git show akan menampilkan informasi commit terakhir (HEAD)."
+  },
+  {
+    "id": "git-log",
+    "command": "git log",
+    "description": "Menampilkan riwayat commit secara detail di branch saat ini",
+    "keywords": ["git log", "riwayat commit", "log commit", "history commit"],
+    "category": "Git",
+    "risk": "Safe",
+    "example": "git log",
+    "beginner_tip": "Tekan 'q' untuk keluar dari halaman log."
+  },
+  {
+    "id": "git-log-oneline",
+    "command": "git log --oneline",
+    "description": "Menampilkan riwayat commit secara ringkas, satu baris per commit",
+    "keywords": ["git log oneline", "log ringkas", "log satu baris", "history commit ringkas"],
+    "category": "Git",
+    "risk": "Safe",
+    "example": "git log --oneline",
+    "beginner_tip": "Tampilan ini jauh lebih rapi dan mudah dibaca untuk proyek dengan banyak commit."
+  },
+  {
+    "id": "git-reflog",
+    "command": "git reflog",
+    "description": "Menampilkan riwayat perubahan referensi branch (berguna untuk melacak commit yang hilang/dihapus)",
+    "keywords": ["git reflog", "reflog", "riwayat reflog", "lacak commit hilang"],
+    "category": "Git",
+    "risk": "Safe",
+    "example": "git reflog",
+    "beginner_tip": "Ini adalah jaring pengaman Git. Jika Anda tidak sengaja menghapus commit atau branch, cari hash commit di sini."
+  },
+  {
+    "id": "git-blame",
+    "command": "git blame",
+    "description": "Menampilkan siapa yang mengubah setiap baris dalam suatu file beserta revisinya",
+    "keywords": ["git blame", "blame file", "siapa edit baris", "riwayat baris file"],
+    "category": "Git",
+    "risk": "Safe",
+    "example": "git blame namafile.txt",
+    "beginner_tip": "Berguna untuk mencari tahu siapa yang bertanggung jawab atas penulisan baris kode tertentu."
+  },
+  {
+    "id": "git-branch",
+    "command": "git branch",
+    "description": "Menampilkan daftar branch lokal di repository saat ini",
+    "keywords": ["git branch", "daftar branch", "lihat branch", "list branch"],
+    "category": "Git",
+    "risk": "Safe",
+    "example": "git branch",
+    "beginner_tip": "Branch yang aktif ditandai dengan tanda bintang (*) dan berwarna hijau."
+  },
+  {
+    "id": "git-branch-all",
+    "command": "git branch -a",
+    "description": "Menampilkan daftar semua branch, baik lokal maupun remote",
+    "keywords": ["git branch -a", "semua branch", "branch remote lokal", "branch all"],
+    "category": "Git",
+    "risk": "Safe",
+    "example": "git branch -a",
+    "beginner_tip": "Membantu melihat branch yang ada di server remote (seperti GitHub/GitLab)."
+  },
+  {
+    "id": "git-remote-v",
+    "command": "git remote -v",
+    "description": "Menampilkan daftar URL repository remote yang terhubung dengan repository lokal",
+    "keywords": ["git remote", "remote url", "cek remote", "git remote -v"],
+    "category": "Git",
+    "risk": "Safe",
+    "example": "git remote -v",
+    "beginner_tip": "-v singkatan dari verbose, menampilkan URL fetch dan push."
+  },
+  {
+    "id": "git-init",
+    "command": "git init",
+    "description": "Menginisialisasi repository Git baru di direktori saat ini",
+    "keywords": ["git init", "inisialisasi git", "buat repo baru", "mulai git"],
+    "category": "Git",
+    "risk": "Moderate",
+    "example": "git init",
+    "beginner_tip": "Perintah ini membuat folder tersembunyi bernama .git di direktori Anda."
+  },
+  {
+    "id": "git-add",
+    "command": "git add",
+    "description": "Menambahkan file baru atau perubahan file ke staging area",
+    "keywords": ["git add", "tambah staging", "stage file", "git add file"],
+    "category": "Git",
+    "risk": "Moderate",
+    "example": "git add namafile.txt",
+    "beginner_tip": "Gunakan 'git add .' untuk menambahkan seluruh perubahan di direktori saat ini."
+  },
+  {
+    "id": "git-restore-file",
+    "command": "git restore",
+    "description": "Membatalkan perubahan pada file di working directory (mengembalikan ke kondisi commit terakhir)",
+    "keywords": ["git restore", "batal ubah file", "restore file git", "cancel changes"],
+    "category": "Git",
+    "risk": "Moderate",
+    "example": "git restore namafile.txt",
+    "beginner_tip": "Hati-hati: perubahan yang belum di-commit akan hilang secara permanen."
+  },
+  {
+    "id": "git-restore-all",
+    "command": "git restore .",
+    "description": "Membatalkan seluruh perubahan pada semua file di direktori saat ini",
+    "keywords": ["git restore .", "batal semua perubahan", "restore semua", "cancel all changes"],
+    "category": "Git",
+    "risk": "Moderate",
+    "example": "git restore .",
+    "beginner_tip": "Hati-hati: seluruh perubahan lokal yang belum di-stage/commit akan dihapus."
+  },
+  {
+    "id": "git-commit",
+    "command": "git commit -m",
+    "description": "Menyimpan snapshot perubahan yang ada di staging area ke dalam riwayat git",
+    "keywords": ["git commit", "commit", "simpan perubahan git", "buat commit"],
+    "category": "Git",
+    "risk": "Moderate",
+    "example": "git commit -m \"Deskripsi perubahan\"",
+    "beginner_tip": "Selalu berikan pesan commit yang jelas dan ringkas agar riwayat proyek mudah dipahami."
+  },
+  {
+    "id": "git-push",
+    "command": "git push",
+    "description": "Mengunggah commit lokal ke repository remote di server",
+    "keywords": ["git push", "push commit", "unggah git", "push ke github"],
+    "category": "Git",
+    "risk": "Moderate",
+    "example": "git push origin main",
+    "beginner_tip": "Pastikan Anda telah melakukan commit sebelum melakukan push."
+  },
+  {
+    "id": "git-pull",
+    "command": "git pull",
+    "description": "Mengambil perubahan terbaru dari repository remote dan langsung menggabungkannya (merge) ke branch lokal",
+    "keywords": ["git pull", "tarik perubahan", "update repo lokal", "pull git"],
+    "category": "Git",
+    "risk": "Moderate",
+    "example": "git pull origin main",
+    "beginner_tip": "Sebaiknya jalankan ini sebelum mulai bekerja untuk menghindari konflik kode."
+  },
+  {
+    "id": "git-fetch",
+    "command": "git fetch",
+    "description": "Mengambil informasi riwayat/commit terbaru dari repository remote tanpa menggabungkannya ke branch lokal",
+    "keywords": ["git fetch", "ambil info remote", "cek update remote", "fetch git"],
+    "category": "Git",
+    "risk": "Moderate",
+    "example": "git fetch origin",
+    "beginner_tip": "Berguna untuk melihat apakah ada perubahan baru di remote tanpa memengaruhi kode lokal Anda."
+  },
+  {
+    "id": "git-switch",
+    "command": "git switch",
+    "description": "Berpindah dari branch aktif ke branch lain",
+    "keywords": ["git switch", "pindah branch", "ganti branch", "switch branch"],
+    "category": "Git",
+    "risk": "Moderate",
+    "example": "git switch nama_branch",
+    "beginner_tip": "Pastikan working directory bersih sebelum berpindah branch."
+  },
+  {
+    "id": "git-switch-create",
+    "command": "git switch -c",
+    "description": "Membuat branch baru dan langsung berpindah ke branch tersebut",
+    "keywords": ["git switch -c", "buat branch baru", "create branch switch", "new branch"],
+    "category": "Git",
+    "risk": "Moderate",
+    "example": "git switch -c branch_baru",
+    "beginner_tip": "Alternatif modern dari 'git checkout -b'."
+  },
+  {
+    "id": "git-checkout",
+    "command": "git checkout",
+    "description": "Berpindah branch, memulihkan file working tree, atau beralih ke commit tertentu",
+    "keywords": ["git checkout", "checkout branch", "pindah branch lama", "checkout commit"],
+    "category": "Git",
+    "risk": "Moderate",
+    "example": "git checkout nama_branch",
+    "beginner_tip": "Untuk berpindah branch, disarankan menggunakan 'git switch' karena lebih spesifik."
+  },
+  {
+    "id": "git-merge",
+    "command": "git merge",
+    "description": "Menggabungkan riwayat commit dari branch lain ke branch yang sedang aktif",
+    "keywords": ["git merge", "gabung branch", "merge branch", "penyatuan branch"],
+    "category": "Git",
+    "risk": "Moderate",
+    "example": "git merge nama_branch",
+    "beginner_tip": "Jika terjadi konflik, Anda harus menyelesaikannya secara manual sebelum menyelesaikan merge."
+  },
+  {
+    "id": "git-rebase",
+    "command": "git rebase",
+    "description": "Menerapkan commit dari branch saat ini di atas branch dasar lainnya untuk riwayat commit yang lebih linear",
+    "keywords": ["git rebase", "rebase branch", "rebase git", "linear history"],
+    "category": "Git",
+    "risk": "Moderate",
+    "example": "git rebase main",
+    "beginner_tip": "Jangan lakukan rebase pada commit yang sudah di-push ke public repository."
+  },
+  {
+    "id": "git-branch-delete",
+    "command": "git branch -d",
+    "description": "Menghapus branch lokal yang sudah digabungkan (merged)",
+    "keywords": ["git branch -d", "hapus branch", "delete branch", "buang branch"],
+    "category": "Git",
+    "risk": "Moderate",
+    "example": "git branch -d nama_branch",
+    "beginner_tip": "Gunakan flag -D jika ingin memaksa menghapus branch yang belum di-merge."
+  },
+  {
+    "id": "git-stash",
+    "command": "git stash",
+    "description": "Menyimpan sementara perubahan yang belum di-commit agar working directory bersih",
+    "keywords": ["git stash", "stash", "simpan sementara", "hide changes"],
+    "category": "Git",
+    "risk": "Moderate",
+    "example": "git stash",
+    "beginner_tip": "Sangat berguna saat Anda harus pindah branch darurat tapi belum siap commit perubahan saat ini."
+  },
+  {
+    "id": "git-stash-pop",
+    "command": "git stash pop",
+    "description": "Mengembalikan perubahan terakhir yang di-stash dan langsung menghapusnya dari daftar stash",
+    "keywords": ["git stash pop", "pop stash", "kembalikan stash", "terapkan stash"],
+    "category": "Git",
+    "risk": "Moderate",
+    "example": "git stash pop",
+    "beginner_tip": "Perubahan akan diterapkan kembali ke working directory Anda."
+  },
+  {
+    "id": "git-stash-apply",
+    "command": "git stash apply",
+    "description": "Mengembalikan perubahan dari stash ke working directory tanpa menghapusnya dari daftar stash",
+    "keywords": ["git stash apply", "apply stash", "kembalikan stash aman"],
+    "category": "Git",
+    "risk": "Moderate",
+    "example": "git stash apply",
+    "beginner_tip": "Berguna jika Anda ingin menerapkan stash yang sama ke beberapa branch berbeda."
+  },
+  {
+    "id": "git-stash-drop",
+    "command": "git stash drop",
+    "description": "Menghapus entri stash tertentu dari daftar penyimpanan stash",
+    "keywords": ["git stash drop", "drop stash", "hapus stash", "delete stash"],
+    "category": "Git",
+    "risk": "Moderate",
+    "example": "git stash drop stash@{0}",
+    "beginner_tip": "Hati-hati: stash yang dihapus tidak dapat dikembalikan lagi."
+  },
+  {
+    "id": "git-remote-add",
+    "command": "git remote add",
+    "description": "Menambahkan koneksi repository remote baru",
+    "keywords": ["git remote add", "tambah remote", "add remote", "hubungkan git remote"],
+    "category": "Git",
+    "risk": "Moderate",
+    "example": "git remote add origin https://github.com/user/repo.git",
+    "beginner_tip": "Nama remote default biasanya adalah 'origin'."
+  },
+  {
+    "id": "git-remote-remove",
+    "command": "git remote remove",
+    "description": "Menghapus koneksi ke repository remote tertentu",
+    "keywords": ["git remote remove", "hapus remote", "delete remote", "remove remote git"],
+    "category": "Git",
+    "risk": "Moderate",
+    "example": "git remote remove origin",
+    "beginner_tip": "Perintah ini hanya memutus tautan lokal ke remote, tidak menghapus repository asli di server."
+  },
+  {
+    "id": "git-tag",
+    "command": "git tag",
+    "description": "Menampilkan daftar tag (penanda versi) yang ada di repository",
+    "keywords": ["git tag", "lihat tag", "daftar tag", "list tag"],
+    "category": "Git",
+    "risk": "Moderate",
+    "example": "git tag",
+    "beginner_tip": "Tag biasanya digunakan untuk menandai rilis versi software (seperti v1.0.0)."
+  },
+  {
+    "id": "git-tag-annotate",
+    "command": "git tag -a",
+    "description": "Membuat tag beranotasi dengan pesan deskripsi tambahan",
+    "keywords": ["git tag -a", "buat tag", "tag baru", "annotate tag"],
+    "category": "Git",
+    "risk": "Moderate",
+    "example": "git tag -a v1.0.0 -m \"Rilis versi 1.0.0\"",
+    "beginner_tip": "Tag beranotasi menyimpan data pembuat, tanggal, dan pesan tag."
+  },
+  {
+    "id": "git-push-tags",
+    "command": "git push origin --tags",
+    "description": "Mengunggah seluruh tag lokal ke server remote",
+    "keywords": ["git push tags", "push tag ke github", "unggah tag"],
+    "category": "Git",
+    "risk": "Moderate",
+    "example": "git push origin --tags",
+    "beginner_tip": "Secara default, perintah 'git push' biasa tidak akan otomatis mengunggah tag."
+  },
+  {
+    "id": "git-cherry-pick",
+    "command": "git cherry-pick",
+    "description": "Mengambil satu commit tertentu dari branch lain dan menerapkannya sebagai commit baru di branch aktif",
+    "keywords": ["git cherry pick", "cherry pick", "ambil commit tertentu"],
+    "category": "Git",
+    "risk": "Moderate",
+    "example": "git cherry-pick hash_commit",
+    "beginner_tip": "Sangat membantu jika Anda ingin menyalin fitur kecil dari branch eksperimen tanpa melakukan merge penuh."
+  },
+  {
+    "id": "git-merge-squash",
+    "command": "git merge --squash",
+    "description": "Menggabungkan semua commit dari branch lain menjadi satu commit tunggal di branch aktif",
+    "keywords": ["git merge squash", "merge squash", "gabung satu commit"],
+    "category": "Git",
+    "risk": "Moderate",
+    "example": "git merge --squash nama_branch",
+    "beginner_tip": "Membuat riwayat commit di branch utama (seperti main/master) tetap bersih dan ringkas."
+  },
+  {
+    "id": "git-clone",
+    "command": "git clone",
+    "description": "Menyalin repository remote yang sudah ada ke dalam direktori lokal komputer Anda",
+    "keywords": ["git clone", "clone git", "download repository", "salin repo"],
+    "category": "Git",
+    "risk": "Dangerous",
+    "example": "git clone https://github.com/user/repo.git",
+    "beginner_tip": "Menyalin seluruh riwayat commit dan file proyek ke direktori baru."
+  },
+  {
+    "id": "git-reset-head",
+    "command": "git reset HEAD",
+    "description": "Membatalkan file dari staging area (unstage) tanpa menghapus perubahan kodenya",
+    "keywords": ["git reset head", "unstage file", "batal add", "reset head"],
+    "category": "Git",
+    "risk": "Dangerous",
+    "example": "git reset HEAD namafile.txt",
+    "beginner_tip": "Perubahan akan kembali ke working directory Anda sebagai file yang belum di-stage."
+  },
+  {
+    "id": "git-reset-soft",
+    "command": "git reset --soft HEAD~1",
+    "description": "Membatalkan commit terakhir, namun tetap mempertahankan perubahan file di staging area",
+    "keywords": ["git reset soft", "batal commit terakhir", "reset soft commit"],
+    "category": "Git",
+    "risk": "Dangerous",
+    "example": "git reset --soft HEAD~1",
+    "beginner_tip": "Gunakan ini jika Anda ingin memperbaiki pesan commit atau menambahkan perubahan tambahan ke commit tersebut."
+  },
+  {
+    "id": "git-reset-hard",
+    "command": "git reset --hard HEAD~1",
+    "description": "Membatalkan commit terakhir beserta seluruh perubahan file di staging area dan working directory secara permanen",
+    "keywords": ["git reset hard", "batal total commit", "reset hard commit", "hapus commit terakhir"],
+    "category": "Git",
+    "risk": "Dangerous",
+    "example": "git reset --hard HEAD~1",
+    "beginner_tip": "⚠️ PERINGATAN: Perintah ini menghapus semua kode yang belum di-commit dan commit terakhir secara permanen!"
+  },
+  {
+    "id": "git-revert",
+    "command": "git revert",
+    "description": "Membuat commit baru yang membalikkan seluruh efek/perubahan dari commit tertentu",
+    "keywords": ["git revert", "revert commit", "balikkan commit", "revert git"],
+    "category": "Git",
+    "risk": "Dangerous",
+    "example": "git revert hash_commit",
+    "beginner_tip": "Cara aman untuk membatalkan commit di repository bersama karena tidak merusak riwayat commit lama."
+  },
+  {
+    "id": "git-clean-fd",
+    "command": "git clean -fd",
+    "description": "Menghapus seluruh file dan folder yang tidak dilacak (untracked) dari working directory",
+    "keywords": ["git clean", "clean untracked", "hapus file tak dilacak", "clean fd"],
+    "category": "Git",
+    "risk": "Dangerous",
+    "example": "git clean -fd",
+    "beginner_tip": "⚠️ PERINGATAN: File yang tidak dilacak akan dihapus permanen. Jalankan 'git clean -nd' terlebih dahulu untuk simulasi."
+  },
+  {
+    "id": "git-bisect",
+    "command": "git bisect",
+    "description": "Menggunakan pencarian biner (binary search) untuk menemukan commit mana yang memperkenalkan bug/celah",
+    "keywords": ["git bisect", "bisect", "cari commit bug", "temukan bug commit"],
+    "category": "Git",
+    "risk": "Dangerous",
+    "example": "git bisect start",
+    "beginner_tip": "Anda menandai commit buruk (bad) dan commit baik (good), Git akan berpindah di antara commit untuk diuji."
+  },
+  {
+    "id": "git-rebase-interactive",
+    "command": "git rebase -i",
+    "description": "Melakukan rebase interaktif untuk mengedit, memilah, menggabungkan (squash), atau menghapus commit lama",
+    "keywords": ["git rebase -i", "rebase interaktif", "edit commit lama", "squash commit"],
+    "category": "Git",
+    "risk": "Dangerous",
+    "example": "git rebase -i HEAD~3",
+    "beginner_tip": "Membuka editor teks berisi instruksi khusus untuk menata ulang riwayat commit Anda."
+  },
+  {
+    "id": "git-worktree",
+    "command": "git worktree",
+    "description": "Mengelola beberapa working tree yang terhubung dengan repository yang sama (mengerjakan beberapa branch sekaligus di folder terpisah)",
+    "keywords": ["git worktree", "worktree", "banyak folder branch", "multi branch folder"],
+    "category": "Git",
+    "risk": "Dangerous",
+    "example": "git worktree add ../fitur-baru nama_branch",
+    "beginner_tip": "Sangat berguna untuk meneliti bug di branch lain tanpa mengganggu pekerjaan Anda di branch aktif."
+  },
+  {
+    "id": "git-submodule",
+    "command": "git submodule",
+    "description": "Menyematkan repository Git eksternal ke dalam subdirektori proyek Anda",
+    "keywords": ["git submodule", "submodule", "repo dalam repo", "embed git repository"],
+    "category": "Git",
+    "risk": "Dangerous",
+    "example": "git submodule add URL_REPO path/folder",
+    "beginner_tip": "Submodule bertindak sebagai pointer ke commit tertentu pada repository eksternal."
+  },
+  {
+    "id": "generate_commit_message",
+    "command": "generate_commit_message",
+    "description": "Membuat pesan commit otomatis berdasarkan hasil pembacaan perbedaan file (git diff)",
+    "keywords": ["generate commit message", "buat pesan commit", "commit message ai", "saran commit"],
+    "category": "AI Skills",
+    "risk": "Safe",
+    "example": "generate_commit_message",
+    "beginner_tip": "AI akan menyusun pesan commit yang rapi berdasarkan perubahan kode Anda."
+  },
+  {
+    "id": "explain_changes",
+    "command": "explain_changes",
+    "description": "Menjelaskan baris-baris perubahan kode (git diff) secara rinci dan mudah dipahami",
+    "keywords": ["explain changes", "jelaskan perubahan", "arti diff", "penjelasan kode"],
+    "category": "AI Skills",
+    "risk": "Safe",
+    "example": "explain_changes",
+    "beginner_tip": "Membantu Anda atau rekan satu tim memahami tujuan dan implikasi dari perubahan kode."
+  },
+  {
+    "id": "review_diff",
+    "command": "review_diff",
+    "description": "Meninjau dan menganalisis kode yang diubah (git diff) untuk menemukan potensi kesalahan atau masalah performa",
+    "keywords": ["review diff", "tinjau diff", "code review ai", "cek kualitas kode"],
+    "category": "AI Skills",
+    "risk": "Safe",
+    "example": "review_diff",
+    "beginner_tip": "Saran praktis untuk meningkatkan kualitas kode sebelum diajukan dalam Pull Request."
+  },
+  {
+    "id": "create_pr_summary",
+    "command": "create_pr_summary",
+    "description": "Membuat ringkasan deskripsi Pull Request (PR) otomatis berdasarkan perbedaan branch (git diff origin/main)",
+    "keywords": ["create pr summary", "ringkasan pr", "buat deskripsi pr", "pr description ai"],
+    "category": "AI Skills",
+    "risk": "Safe",
+    "example": "create_pr_summary",
+    "beginner_tip": "Menghemat waktu penulisan dokumentasi PR untuk ditinjau oleh reviewer."
+  },
+  {
+    "id": "suggest_branch_name",
+    "command": "suggest_branch_name",
+    "description": "Merekomendasikan nama branch Git yang deskriptif dan konsisten berdasarkan fitur yang akan dibuat",
+    "keywords": ["suggest branch name", "saran nama branch", "nama branch git", "rekomendasi branch"],
+    "category": "AI Skills",
+    "risk": "Safe",
+    "example": "suggest_branch_name",
+    "beginner_tip": "Mendukung format nama branch standar seperti feat/auth atau fix/bug-token."
+  },
+  {
+    "id": "find_bug",
+    "command": "find_bug",
+    "description": "Menganalisis file kode untuk menemukan bug, kesalahan logika, atau kerentanan keamanan",
+    "keywords": ["find bug", "cari bug", "analisis bug", "temukan kesalahan kode"],
+    "category": "AI Skills",
+    "risk": "Safe",
+    "example": "find_bug",
+    "beginner_tip": "Gunakan skill ini jika ada error yang sulit dilacak pada kode Anda."
+  },
+  {
+    "id": "suggest_refactor",
+    "command": "suggest_refactor",
+    "description": "Memberikan saran restrukturisasi (refactor) kode agar lebih bersih, efisien, dan mudah dipelihara",
+    "keywords": ["suggest refactor", "saran refactor", "bersihkan kode", "refactor ai"],
+    "category": "AI Skills",
+    "risk": "Safe",
+    "example": "suggest_refactor",
+    "beginner_tip": "Membantu meningkatkan kualitas arsitektur kode tanpa mengubah perilakunya."
+  },
+  {
+    "id": "smart_stage",
+    "command": "smart_stage",
+    "description": "Membantu mengelompokkan dan menambahkan file secara cerdas ke staging area (git add)",
+    "keywords": ["smart stage", "stage cerdas", "git add cerdas", "pengelompokkan stage"],
+    "category": "AI Skills",
+    "risk": "Moderate",
+    "example": "smart_stage",
+    "beginner_tip": "AI akan merekomendasikan file mana saja yang logis untuk di-stage bersama."
+  },
+  {
+    "id": "smart_commit",
+    "command": "smart_commit",
+    "description": "Melakukan git add dan git commit secara otomatis dengan pesan commit yang disusun cerdas oleh AI",
+    "keywords": ["smart commit", "commit cerdas", "add commit otomatis"],
+    "category": "AI Skills",
+    "risk": "Moderate",
+    "example": "smart_commit",
+    "beginner_tip": "Mengotomatiskan alur kerja git add + commit dalam satu langkah interaktif."
+  },
+  {
+    "id": "commit_and_push",
+    "command": "commit_and_push",
+    "description": "Melakukan git add, git commit, dan git push sekaligus secara otomatis ke server remote",
+    "keywords": ["commit and push", "commit push otomatis", "publish perubahan"],
+    "category": "AI Skills",
+    "risk": "Moderate",
+    "example": "commit_and_push",
+    "beginner_tip": "⚠️ Hati-hati: Pastikan Anda meninjau perubahan yang siap di-push agar tidak ada file tidak diinginkan yang terkirim."
+  },
+  {
+    "id": "undo_changes",
+    "command": "undo_changes",
+    "description": "Membatalkan perubahan file atau commit terakhir (menggunakan git restore atau git reset)",
+    "keywords": ["undo changes", "batal perubahan", "undo git", "kembalikan kode"],
+    "category": "AI Skills",
+    "risk": "Dangerous",
+    "example": "undo_changes",
+    "beginner_tip": "⚠️ PERINGATAN: Skill ini berpotensi menghapus kode lokal yang belum disimpan secara permanen."
+  },
+  {
+    "id": "recover_commit",
+    "command": "recover_commit",
+    "description": "Mencari dan memulihkan commit yang terhapus menggunakan pembacaan git reflog",
+    "keywords": ["recover commit", "pulihkan commit", "cari commit hilang"],
+    "category": "AI Skills",
+    "risk": "Safe",
+    "example": "recover_commit",
+    "beginner_tip": "Membantu menemukan kembali titik commit lama yang tidak sengaja terhapus."
+  },
+  {
+    "id": "resolve_conflicts",
+    "command": "resolve_conflicts",
+    "description": "Membatalkan / menyelesaikan konflik penggabungan kode (merge conflict) secara cerdas",
+    "keywords": ["resolve conflicts", "selesaikan konflik", "merge conflict helper"],
+    "category": "AI Skills",
+    "risk": "Moderate",
+    "example": "resolve_conflicts",
+    "beginner_tip": "AI akan menyajikan opsi pemecahan konflik berdasarkan kedua sisi kode yang bertentangan."
+  }
+]

@@ -1,0 +1,14 @@
+[meta]
+name = "Container Pack"
+description = "Development package using containers (Docker, Podman)."
+version = "1.0.0"
+author = "TeaLinuxOS Team"
+category = "development"
+icon = "container.svg"
+
+[packages]
+install = [ "docker", "docker-compose", "podman", "buildah", "ansible", "terraform", "kubectl", "minikube", "helm", "git", "code", "vim", "htop",]
+aur = [ "lazydocker-bin",]
+
+[services]
+enable = [ "docker",]

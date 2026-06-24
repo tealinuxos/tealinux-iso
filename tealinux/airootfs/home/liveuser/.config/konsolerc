@@ -1,0 +1,23 @@
+[Desktop Entry]
+DefaultProfile=Tea-lightv2.profile
+
+[General]
+ConfigVersion=1
+
+[MainWindow]
+ToolBarsMovable=Disabled
+
+[MainWindow][Toolbar mainToolBar]
+ToolButtonStyle=IconOnly
+
+[MainWindow][Toolbar sessionToolbar]
+ToolButtonStyle=IconOnly
+
+[Toolbar mainToolBar]
+ToolButtonStyle=IconOnly
+
+[Toolbar sessionToolbar]
+ToolButtonStyle=IconOnly
+
+[UiSettings]
+ColorScheme=

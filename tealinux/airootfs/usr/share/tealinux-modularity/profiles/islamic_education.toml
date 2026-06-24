@@ -1,0 +1,14 @@
+[meta]
+name = "Islamic Education Pack"
+description = "Collection of Islamic applications (Quran, prayer times, Arabic fonts)."
+version = "1.0.0"
+author = "TeaLinuxOS Team"
+category = "education"
+icon = "islamic_education.svg"
+
+[packages]
+install = [ "ttf-arabic",]
+aur = [ "quran-desktop", "minbar",]
+
+[services]
+enable = []

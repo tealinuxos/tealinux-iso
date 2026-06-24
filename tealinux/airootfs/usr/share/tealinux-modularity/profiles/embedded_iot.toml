@@ -1,0 +1,21 @@
+[meta]
+name = "Embedded/IoT Pack"
+description = "Tools for hardware, microcontroller, and IoT development."
+version = "1.0.0"
+author = "TeaLinuxOS Team"
+category = "development"
+
+[packages]
+install = [
+    "arduino-cli",
+    "avrdude",
+    "python-pip"
+]
+
+aur = [
+    "platformio",
+    "arduino-ide-bin"
+]
+
+[services]
+enable = []

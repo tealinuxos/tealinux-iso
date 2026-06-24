@@ -1,0 +1,18 @@
+[Desktop Entry]
+Comment=Tea theme for kde plasma 6
+Encoding=UTF-8
+Keywords=Desktop;Workspace;Appearance;Look and Feel;
+Name=Tea-dark
+Type=Service
+X-KDE-ParentApp=
+X-KDE-PluginInfo-Author=Doscom
+X-KDE-PluginInfo-Category=
+X-KDE-PluginInfo-Email=go.doscom@gmail.com
+X-KDE-PluginInfo-License=GPL3.0
+X-KDE-PluginInfo-Name=tea-dark
+X-KDE-PluginInfo-Version=0.1
+X-KDE-PluginInfo-Website=
+X-KDE-ServiceTypes=Plasma/LookAndFeel
+X-KDE-fallbackPackage=org.kde.breeze.desktop
+X-KPackage-Dependencies=kns://icons.knsrc/api.kde-look.org/1359276
+X-Plasma-MainScript=defaults

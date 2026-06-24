@@ -1,2 +1,39 @@
 .work
 out
+*.zst
+
+# non bloated
+tealinux-installer/src/*
+tealinux-installer/tealinux-installer/*
+tealinux-installer/pkg/*
+
+tealinux-modularitea/pkg/*
+tealinux-modularitea/src/*
+tealinux-modularitea/tealinux-modularity/*
+
+# ignore webkit2gtk issue
+localrepo/localrepo.db.tar.xz
+localrepo/localrepo.files.tar.xz
+localrepo/localrepo.db
+localrepo/localrepo.files
+localrepo/localrepo.db.tar.xz.old
+localrepo/localrepo.files.tar.xz.old
+
+# this is ignored because its aur, and its generated when runtime
+darkly/
+kde-material-you-colors/
+klassy/
+kwin-effects-better-blur-dx/
+plasma6-applets-panel-colorizer/
+python-materialyoucolor/
+python-pywal16/
+
+
+localrepo/klassy-6.5.3-1-x86_64.pkg.tar.zst
+localrepo/klassy-debug-6.5.3-1-x86_64.pkg.tar.zst
+localrepo/klassy-qt5-6.5.3-1-x86_64.pkg.tar.zst
+localrepo/tealinux-installer-git-2.0-1-x86_64.pkg.tar.zst
+.vscode
+
+tealinux-modularitea-libs
+hojicha-AI/

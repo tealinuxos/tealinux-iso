@@ -16,12 +16,13 @@ arch-install-scripts
 
 # installer
 tealinux-installer-git
+tealinux-modularity-git
+modularitea-libs
 lshw
 dmidecode
 rsync
 fuse2
 gcc-libs
-webkit2gtk
 grub
 efibootmgr
 amd-ucode
@@ -39,6 +40,10 @@ vim
 vi
 nano
 
+# AI
+hojicha-ai-git
+
+
 # audio
 pipewire
 pipewire-pulse
@@ -47,12 +52,6 @@ sof-firmware
 
 # browser
 firefox
-
-# desktop environment
-cosmic
-cosmic-icon-theme
-power-profiles-daemon
-xdg-utils
 
 # shell
 #zsh
@@ -84,34 +83,135 @@ sudo
 xdg-user-dirs
 eza
 git
-ntfs-3g
 fastfetch
-gparted
 htop
 udisks2
 gvfs
 gvfs-mtp
 android-udev
+kde-material-you-colors
+darkly
+klassy
+kwin-effects-better-blur-dx
+plasma6-applets-panel-colorizer
 
 # font
 noto-fonts-cjk
 noto-fonts-emoji
-ttf-nerd-fonts-symbols
+#ttf-nerd-fonts-symbols
+
+# desktop environment
+# Minimal set up plasma desktop
+plasma-desktop
+sddm
+
+# Terminal 
+konsole
+
+# File Manager
+dolphin
+
+# Nice to have one
+kdeconnect
+
+# Archive
+ark
+
+# ffmpeg based thumbnailer
+ffmpegthumbs
+
+# Another thumbnailers
+kdegraphics-thumbnailers
+
+# Disk usage analyzer
+filelight
 
 # Image viewer
-loupe
+gwenview
 
-# Video viewer
-totem
-
-# Document viewer 
-evince
+# Hybrid iso to usb
+isoimagewriter
 
 # Camera app
-snapshot
+kamoso
+
+kdenetwork-filesharing
+
+# Desktop sharing
+krfb
+
+# Diff-ing file 
+kompare
+
+# Calculator
+kcalc
+
+# Document viewer 
+okular
+
+# Screenshot
+spectacle
+
+# Gparted friend in qt
+# partitionmanager
+
+# Torrent ooo
+ktorrent
+
+# Like a notepad
+kate
+
+# App/theme store
+discover
+
+# Noto Nerd Fonts. Noto Mania!!!
+ttf-noto-nerd
+
+# power profiling
+power-profiles-daemon
+
+# applet kde
+plasma-nm
+plasma-pa
+klipper
+plasma-workspace
+kscreen
 
 # bluetooth
 bluez
 
-# AUR helper
+# Aur helper
 paru
+
+
+
+
+
+
+### FROM spesific aur ###
+# note: this is experimental, if iso size is exploded, try commenting out these files
+# darkly
+frameworkintegration5
+kcmutils5
+kcolorscheme
+kconfigwidgets5
+kcoreaddons
+kdecoration
+kguiaddons
+kiconthemes
+kiconthemes5
+kirigami2
+kwindowsystem
+kwindowsystem5
+libplasma
+qt6-declarative
+cmake
+extra-cmake-modules
+
+# python-pywal16 (dependency from kde-material-you-colors)
+# taken from https://aur.archlinux.org/packages/python-pywal16?all_deps=1#pkgdeps
+imagemagick
+procps-ng
+python
+sh
+git

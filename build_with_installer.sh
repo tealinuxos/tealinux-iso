@@ -1,15 +1,75 @@
 #!/bin/bash
+
 sudo sed -i "s|Server = file://.*|Server = file://$(pwd)/localrepo/|" ./tealinux/pacman.conf
 
 start_time=$(date +%s)
 
-# Build and add installer to localrepo
-cd ./localrepo
-makepkg -fs
-repo-add localrepo.db.tar.xz tealinux-installer-git-2.0-1-x86_64.pkg.tar.zst
+LOCALREPO="$(pwd)/localrepo"
+
+git submodule update --init tealinux/grub/lorem-loader
+git submodule update --init tealinux/airootfs/usr/share/grub/themes/lorem-loader
+
+sh ./spesific_aur.sh
+
+# --- tealinux-installer ---
+if [[ ! -f "$LOCALREPO/tealinux-installer-git-2.0-1-x86_64.pkg.tar.zst" ]]; then
+    cd ./tealinux-installer
+    makepkg -fs
+    mv tealinux-installer-git-2.0-1-x86_64.pkg.tar.zst "$LOCALREPO"
+    cd ..
+else
+    echo "[SKIP] tealinux-installer already exists"
+fi
+
+
+# --- tealinux-modularity ---
+if [[ ! -f "$LOCALREPO/tealinux-modularity-git-1.0-1-x86_64.pkg.tar.zst" ]]; then
+    cd ./tealinux-modularitea
+    makepkg -fs
+    mv tealinux-modularity-git-1.0-1-x86_64.pkg.tar.zst "$LOCALREPO"
+    cd ..
+else
+    echo "[SKIP] tealinux-modularity already exists"
+fi
+
+# --- modularitea-libs ---
+if [[ ! -f "$LOCALREPO/modularitea-libs-1.0-1-x86_64.pkg.tar.zst" ]]; then
+    if [[ ! -d "tealinux-modularitea-libs" ]]; then
+        git clone https://github.com/tealinuxos/tealinux-modularitea-libs.git
+    else
+        cd tealinux-modularitea-libs
+        git pull
+        cd ..
+    fi
+
+    cd tealinux-modularitea-libs
+    makepkg -fs
+    cp modularitea-libs-1.0-1-x86_64.pkg.tar.zst "$LOCALREPO"
+    cd ..
+else
+    echo "[SKIP] modularitea-libs already exists"
+fi
+
+# --- repo-add ---
+cd "$LOCALREPO"
+repo-add localrepo.db.tar.xz \
+    tealinux-installer-git-2.0-1-x86_64.pkg.tar.zst \
+    tealinux-modularity-git-1.0-1-x86_64.pkg.tar.zst \
+    modularitea-libs-1.0-1-x86_64.pkg.tar.zst \
+    os-prober-btrfs-1.83-2-x86_64.pkg.tar.zst \
+    paru-2.0.4-1-x86_64.pkg.tar.zst \
+    darkly-0.5.38-1-x86_64.pkg.tar.zst \
+    python-pywal16-1:3.8.15-1-any.pkg.tar.zst \
+    python-materialyoucolor-3.0.2-1-x86_64.pkg.tar.zst \
+    kde-material-you-colors-2.2.0-1-x86_64.pkg.tar.zst \
+    klassy-6.5.3-1-x86_64.pkg.tar.zst \
+    kwin-effects-better-blur-dx-2.4.1-2-x86_64.pkg.tar.zst \
+    plasma6-applets-panel-colorizer-7.2.0-1-any.pkg.tar.zst \
+    hojicha-ai-git-1.0-1-x86_64.pkg.tar.zst
+
 cd ..
 
-# Build ISO
+# --- ISO build ---
 sudo rm -rf .work
 time sudo systemd-inhibit mkarchiso -r -v -w .work -o out tealinux
 
@@ -18,4 +78,3 @@ elapsed_time=$((end_time - start_time))
 
 notify-send -u critical "Tealinux Build" "Exited. done in $elapsed_time seconds"
 mpv notif.mp3 > /dev/null 2>&1 &
-

@@ -1,0 +1,14 @@
+[meta]
+name = "Fonts Pack"
+description = "Collection of essential fonts for documents and user interfaces."
+version = "1.0.0"
+author = "TeaLinuxOS Team"
+category = "system"
+icon = "fonts.svg"
+
+[packages]
+install = [ "noto-fonts", "noto-fonts-cjk", "noto-fonts-emoji",]
+aur = [ "ttf-ms-fonts",]
+
+[services]
+enable = []
